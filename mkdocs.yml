@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+site_name: Quor
+site_url: https://docs.quor.dev
+copyright: Copyright &copy; Getup
+theme:
+  name: material
+  custom_dir: docs/overrides
+  logo_light: assets/logo.svg
+  logo_dark: assets/logo-dark.svg
+  favicon: assets/favicon.svg
+  language: en
+  palette:
+      - scheme: default
+        primary: white
+        accent: orange
+        toggle:
+          icon: material/brightness-7
+          name: Switch to dark mode
+      - scheme: slate
+        primary: black
+        accent: orange
+        toggle:
+          icon: material/brightness-4
+          name: Switch to light mode
+extra_css:
+  - stylesheets/extra.css
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+          site_name: Documentation
+        - locale: pt
+          name: Português
+          build: true
+          site_name: Documentação
+          admonition_translations:
+            note: Nota
+extra:
+  generator: false

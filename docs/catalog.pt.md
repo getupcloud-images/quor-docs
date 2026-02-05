@@ -37,7 +37,7 @@ Ao clicar em uma imagem, você acessa a página de detalhes com informações co
 
 ### Versions
 
-Lista todas as versões disponíveis da imagem, com data de atualização e comando `docker pull` para cada uma.
+Lista todas as versões disponíveis da imagem, com data de atualização e comando `docker pull` para cada uma. Ao clicar em uma versão específica, é possível visualizar seus pacotes e vulnerabilidades, além de instruções de scan.
 
 ### Quick Start
 

@@ -2,6 +2,12 @@
 site_name: Quor
 site_url: https://docs.quor.dev
 copyright: Copyright &copy; Getup
+nav:
+  - About Quor: index.md
+  - Getting started: getting-started.md
+  - Image catalog: catalog.md
+  - Image Subscriptions: subscriptions.md
+  - Accounts and Plans: plans.md
 theme:
   name: material
   custom_dir: docs/overrides

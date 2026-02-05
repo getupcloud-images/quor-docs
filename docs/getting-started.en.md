@@ -1,4 +1,4 @@
-# Getting Started with Quor
+# Getting started with Quor
 
 ## Welcome to Quor
 

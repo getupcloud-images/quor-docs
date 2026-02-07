@@ -4,6 +4,7 @@ site_url: https://docs.quor.dev
 copyright: Copyright &copy; Getup
 nav:
   - About Quor: index.md
+  - Internal architecture: internal-architecture.md
   - Getting started: getting-started.md
   - Image catalog: catalog.md
   - Image Subscriptions: subscriptions.md

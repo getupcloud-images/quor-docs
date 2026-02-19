@@ -1,3 +1,11 @@
+:root {
+    --md-text-font: "Inter",sans-serif;
+}
+
+body {
+    font-family: Inter,sans-serif;
+}
+
 [data-md-color-scheme=slate] .md-header {
     background-color: #131A26;
 }

@@ -6,7 +6,9 @@ nav:
   - About Quor: index.md
   - Internal architecture: internal-architecture.md
   - Getting started: getting-started.md
-  - Image catalog: catalog.md
+  - Image catalog:
+      - Overview: catalog.md
+      - Image Details: image-details.md
   - Image Subscriptions: subscriptions.md
   - Accounts and Plans: plans.md
 theme:

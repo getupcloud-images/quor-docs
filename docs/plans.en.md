@@ -7,7 +7,7 @@ Every Quor account can subscribe to images from the catalog, as long as it is li
 - Integrated vulnerability scanner
 - Automatic rebuilds
 - SBOM and provenance included
-- Subscription to up to 2 pre-selected images
+- Subscription to up to 2 images
 
 ## Enterprise
 

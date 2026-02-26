@@ -7,7 +7,7 @@ Toda conta do Quor pode subscrever imagens do catálogo, desde que esteja vincul
 - Scanner de vulnerabilidade integrado
 - Rebuilds automáticos
 - SBOM e proveniência incluídos
-- Subscrição de até 2 imagens pré-selecionadas
+- Subscrição de até 2 imagens
 
 ## Enterprise
 

@@ -53,3 +53,6 @@ plugins:
             note: Nota
 extra:
   generator: false
+  analytics:
+    provider: google
+    property: G-Z2P72X4VM5

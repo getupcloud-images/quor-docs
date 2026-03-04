@@ -7,6 +7,7 @@ nav:
   - Internal architecture: internal-architecture.md
   - Getting started: getting-started.md
   - Image catalog: catalog.md
+  - SBOM: sbom.md
   - Image Subscriptions: subscriptions.md
   - Accounts and Plans: plans.md
 theme:

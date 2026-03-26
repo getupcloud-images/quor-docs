@@ -56,6 +56,7 @@ O **SBOM (Software Bill of Materials)** lista todos os pacotes contidos na image
 ### Provenance
 
 Informações de proveniência da imagem, atestando sua origem e integridade.
+Para todas as imagens e versões, esse conjunto inclui SBOM, assinatura, atestados de proveniência e declarações VEX para adicionar contexto de explorabilidade na análise de vulnerabilidades.
 
 ### Changelog
 

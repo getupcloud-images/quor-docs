@@ -26,6 +26,16 @@ At a high level, the architecture can be understood in four blocks:
 4. **Registry publication and feedback loop**  
    Approved images are published to the Quor registry and kept under continuous monitoring, so newly disclosed CVEs can trigger a new remediation cycle.
 
+## Security strategy by design
+
+Before remediation starts, Quor reduces risk structurally:
+
+- Prefer minimal bases such as Alpine and distroless when compatible with runtime requirements
+- Remove unnecessary OS packages and tooling from runtime images
+- Keep runtime images focused on execution-only dependencies
+
+This directly lowers attack surface, scanner noise, and exploitability options after initial compromise.
+
 ## End-to-end flow
 
 The flow is iterative and continuously repeated:
@@ -49,6 +59,45 @@ The flow is iterative and continuously repeated:
 5. **Publish and monitor**
    - Release the updated image version in the Quor registry.
    - Continue monitoring for newly disclosed CVEs and restart the cycle when needed.
+
+## Patch-gap reduction model
+
+A common supply-chain delay happens between:
+
+1. Security fix merged upstream
+2. Distribution package update
+3. Base image rebuild
+4. Language image rebuild
+5. Application image rebuild and deploy
+
+This delay ("patch gap") can last days or weeks in typical ecosystems.
+
+Quor reduces that gap by rebuilding directly from upstream source commits when security-relevant changes are validated.
+This removes dependency on multiple intermediate release cadences and accelerates remediation delivery.
+
+## Evidence model: SBOM, provenance, SLSA, and VEX
+
+Quor publishes layered evidence for each image version:
+
+- **SBOM**: what components are present
+- **Signature**: image integrity and publisher identity
+- **Provenance attestation**: how/where/by whom the artifact was built
+- **SLSA-aligned controls**: process maturity and build hardening
+- **VEX statements**: whether a reported CVE is exploitable in that exact image context
+
+This model supports risk decisions based on verifiable context, not only raw CVE matching.
+
+## VEX in the operational loop
+
+Scanner output alone cannot determine exploitability.
+Quor uses VEX statements to classify CVEs with auditable technical justification, including statuses such as:
+
+- `not_affected`
+- `affected`
+- `fixed`
+- `under_investigation`
+
+By shipping this context with the image evidence, CI/CD pipelines can suppress non-actionable alerts and prioritize real risk.
 
 ## Why rebuilding from source matters
 

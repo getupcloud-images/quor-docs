@@ -2,30 +2,79 @@
 
 ## Introduction
 
-SBOM (Software Bill of Materials) is no longer a peripheral security topic. As systems grow more complex and rely heavily on open source and third-party artifacts, maintaining security without structural visibility becomes impractical. An SBOM provides that formalized visibility layer.
+SBOM (Software Bill of Materials) is a structured inventory of everything that composes a software artifact.
+It is not only a dependency list. A production-grade SBOM includes metadata such as:
 
-An SBOM is not just a dependency list. It is a structured document that describes the composition of a software artifact, with enough metadata to uniquely identify each component. This typically includes name, version, license, supplier, cryptographic hashes, dependency relationships, and ideally standardized identifiers such as PURL (Package URL) or CPE.
+- Component name and version
+- Supplier/source
+- License
+- Cryptographic hashes
+- Dependency relationships
+- Standard identifiers (for example PURL and CPE)
 
-Conceptually, an SBOM can be modeled as a directed graph of components, where nodes are packages and edges represent dependency relationships. This enables automated reasoning about impact, risk inheritance, and transitive analysis.
+In practice, SBOM data can be modeled as a dependency graph that enables transitive impact analysis and continuous vulnerability correlation over time.
 
-The two dominant formats are SPDX and CycloneDX. SPDX originated in license compliance, while CycloneDX was designed with a stronger focus on application security. Both now support complex dependency modeling, hierarchical relations, digital signatures, and vulnerability data extensions.
+The most common formats are SPDX and CycloneDX:
+
+- SPDX started with license/compliance focus
+- CycloneDX started with stronger application security focus
+
+Both are widely used and supported by modern tooling.
+
+## Why SBOM is foundational for security
+
+When incidents like Log4Shell happen, teams need immediate and precise answers:
+
+- Where is the affected component?
+- Which image versions are impacted?
+- What is already fixed?
+
+Without SBOM, this is often manual and slow. With SBOM, the inventory is already materialized and can be continuously re-evaluated against vulnerability feeds (NVD, OSV, GHSA) without rebuilding the image.
+
+This reduces triage noise and improves response time.
 
 ## SBOM in Quor
 
-In Quor, every published image includes its SBOM. You can access and download it in the UI:
+In Quor, SBOMs are generated during build and published with each image version as part of the security evidence set.
+They are distributed together with signatures and provenance metadata.
+
+You can download an SBOM in the UI:
 
 1. Open the image catalog.
-2. Select the desired image.
-3. On the details page, open the **SBOM** tab.
-4. Choose the version and architecture.
-5. Download the complete SBOM.
+2. Select an image.
+3. Open the **SBOM** tab on the details page.
+4. Select version and architecture.
+5. Download the SBOM file.
 
-SBOMs are generated at build time and published as security artifacts alongside signatures and provenance metadata. This provides a consistent, verifiable inventory across the image lifecycle.
+## Relationship with VEX, provenance, and SLSA
 
-## Why SBOM is structural to security
+SBOM answers **what is inside** an image.
+It does not, by itself, answer:
 
-The core reason SBOM became critical is the asymmetry between consumption and control. Organizations consume thousands of dependencies with limited governance. When an incident like Log4Shell happens, the real question is not "do we have a scanner?" but "do we know exactly where this library is used?".
+- If a CVE is exploitable in that runtime context
+- How the image was built and by whom
+- What software supply chain guarantees are enforced
 
-Without an SBOM, the answer depends on manual searches or rebuilding. With an SBOM, the organization has a verifiable inventory that can be correlated with vulnerability feeds like NVD, OSV, and GHSA. This reduces noise, improves traceability, and enables continuous reprocessing without rebuilding the artifact.
+For that reason, SBOM should be consumed together with:
 
-In mature environments, SBOMs are generated at build time and stored as versioned artifacts. As vulnerability databases update, the inventory can be re-evaluated without recompiling software, aligning with DevSecOps practices.
+- **VEX**: exploitability status and technical justification per CVE (`not_affected`, `affected`, `fixed`, `under_investigation`)
+- **Provenance attestations**: verifiable build origin metadata (source repository, commit, builder identity, build timestamp)
+- **SLSA-aligned controls**: maturity model for reproducible and trustworthy build pipelines
+
+This layered model turns static inventory into actionable and auditable trust evidence.
+
+## Practical note: scanning SBOM vs scanning OCI image
+
+For many pipelines, scanning a generated SBOM is faster than rescanning the full OCI image every time.
+The package inventory is already enumerated, so scanners can focus directly on vulnerability correlation.
+This approach improves scalability and keeps build and vulnerability analysis decoupled.
+
+## Scope and limitations
+
+SBOM is essential, but it is not a complete security model:
+
+- It focuses mainly on third-party composition
+- It does not replace SAST/DAST, threat modeling, or code review
+- It does not prove authenticity unless tied to signature/attestation workflows
+
+Quor treats SBOM as a core building block in a broader evidence-driven security architecture.

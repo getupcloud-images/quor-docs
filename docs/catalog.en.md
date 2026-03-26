@@ -56,6 +56,7 @@ The **SBOM (Software Bill of Materials)** lists all packages contained in the im
 ### Provenance
 
 Provenance information for the image, attesting to its origin and integrity.
+For all images and versions, this evidence set includes SBOM, signature, provenance attestations, and VEX statements to add exploitability context to vulnerability analysis.
 
 ### Changelog
 

@@ -26,6 +26,16 @@ Em alto nível, a arquitetura pode ser entendida em quatro blocos:
 4. **Publicação no registry e ciclo de feedback**  
    As imagens aprovadas são publicadas no registry do Quor e ficam em monitoramento contínuo, para que novas CVEs acionem um novo ciclo de remediação.
 
+## Estratégia de segurança por design
+
+Antes mesmo da remediação, o Quor reduz risco de forma estrutural:
+
+- Prioriza bases mínimas como Alpine e distroless quando compatível com o runtime
+- Remove pacotes e ferramentas desnecessárias da imagem final
+- Mantém a imagem de runtime focada apenas no necessário para execução
+
+Isso reduz superfície de ataque, ruído de scanner e opções de pós-exploração.
+
 ## Fluxo ponta a ponta
 
 O fluxo é iterativo e se repete continuamente:
@@ -49,6 +59,45 @@ O fluxo é iterativo e se repete continuamente:
 5. **Publicar e monitorar**
    - Liberar a nova versão da imagem no registry do Quor.
    - Continuar monitorando novas CVEs e reiniciar o ciclo quando necessário.
+
+## Modelo de redução de patch gap
+
+Um atraso comum na supply chain acontece entre:
+
+1. Merge do fix no upstream
+2. Atualização do pacote na distribuição
+3. Rebuild da imagem base
+4. Rebuild da imagem de linguagem
+5. Rebuild/deploy da imagem da aplicação
+
+Esse atraso ("patch gap") pode durar dias ou semanas.
+
+O Quor reduz esse gap ao recompilar diretamente de commits upstream relevantes para segurança, após validação.
+Com isso, reduz a dependência de múltiplos cronogramas intermediários de release.
+
+## Modelo de evidência: SBOM, proveniência, SLSA e VEX
+
+Para cada versão de imagem, o Quor publica camadas de evidência:
+
+- **SBOM**: quais componentes existem na imagem
+- **Assinatura**: integridade do artefato e identidade de publicação
+- **Atestado de proveniência**: como/onde/por quem o build foi produzido
+- **Controles alinhados a SLSA**: maturidade e robustez do processo
+- **Declarações VEX**: se uma CVE reportada é explorável naquele contexto exato
+
+Esse modelo permite decisões de risco baseadas em contexto verificável, e não apenas em matching bruto de CVE.
+
+## VEX no ciclo operacional
+
+Scan isolado não determina explorabilidade.
+O Quor usa declarações VEX com justificativa técnica auditável, incluindo status como:
+
+- `not_affected`
+- `affected`
+- `fixed`
+- `under_investigation`
+
+Ao publicar esse contexto junto com os artefatos da imagem, pipelines de CI/CD conseguem suprimir alertas não acionáveis e priorizar risco real.
 
 ## Por que recompilar do código-fonte importa
 

@@ -8,6 +8,7 @@ nav:
   - Getting started: getting-started.md
   - Image catalog: catalog.md
   - SBOM: sbom.md
+  - VEX: vex.md
   - Image Subscriptions: subscriptions.md
   - Accounts and Plans: plans.md
 theme:

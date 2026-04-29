@@ -11,6 +11,7 @@ nav:
   - VEX: vex.md
   - Image Subscriptions: subscriptions.md
   - Accounts and Plans: plans.md
+  - Vulnerability Attributes: vulnerability-attributes.md
 theme:
   name: material
   custom_dir: docs/overrides
@@ -19,24 +20,26 @@ theme:
   favicon: assets/favicon.svg
   language: en
   palette:
-      - scheme: default
-        primary: white
-        accent: orange
-        toggle:
-          icon: material/brightness-7
-          name: Switch to dark mode
-      - scheme: slate
-        primary: black
-        accent: orange
-        toggle:
-          icon: material/brightness-4
-          name: Switch to light mode
+    - scheme: default
+      primary: white
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 extra_css:
   - stylesheets/extra.css
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - toc:
+      permalink: true
 plugins:
   - search
   - i18n:

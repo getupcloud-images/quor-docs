@@ -1,5 +1,5 @@
 ---
-description: Explore o catálogo Quor de imagens de containers seguras, com versões, SBOM, assinaturas e changelog de cada imagem.
+description: Explore o catálogo de imagens de containers seguras do Quor, com versões, SBOM, assinaturas e changelog de cada imagem.
 keywords: catálogo de imagens de containers, imagens Quor, imagens seguras, versões de imagens, SBOM
 ---
 

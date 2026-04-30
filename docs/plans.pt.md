@@ -1,3 +1,8 @@
+---
+description: Planos de conta do Quor — Trial (14 dias grátis) e Enterprise. Compare recursos, limites e como subscrever imagens do catálogo.
+keywords: planos Quor, plano Trial, plano Enterprise, subscrição de imagens, preços
+---
+
 # Contas e Planos
 
 Toda conta do Quor pode subscrever imagens do catálogo, desde que esteja vinculada a um plano ativo. Atualmente, o Quor oferece dois tipos de plano:

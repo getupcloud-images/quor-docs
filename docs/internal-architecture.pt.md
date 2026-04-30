@@ -1,3 +1,8 @@
+---
+description: Como o Quor identifica imagens de containers vulneráveis, as recompila a partir do código-fonte e mantém o catálogo próximo de zero CVEs conhecidas.
+keywords: arquitetura Quor, rebuild de imagens, remediação de CVE, segurança da cadeia de suprimentos, scanner de imagens
+---
+
 # Arquitetura interna do Quor
 
 Esta página traz uma visão de alto nível, mais descritiva, de como o Quor identifica imagens vulneráveis, recompila imagens a partir do código-fonte e mantém o catálogo próximo de zero CVEs conhecidas ao longo do tempo.

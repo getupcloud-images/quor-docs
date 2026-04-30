@@ -1,3 +1,8 @@
+---
+description: Como o VEX (Vulnerability Exploitability eXchange) adiciona contexto de explorabilidade a achados de CVE nas imagens de containers do Quor.
+keywords: VEX, Vulnerability Exploitability eXchange, explorabilidade de CVE, triagem de vulnerabilidades, segurança de containers
+---
+
 # VEX
 
 ## Introdução

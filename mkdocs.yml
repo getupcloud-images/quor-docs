@@ -1,6 +1,8 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 site_name: Quor
 site_url: https://docs.quor.dev
+site_description: Documentation for Quor, a catalog of secure container images with zero or near-zero CVEs, digital signatures, and SBOMs for production-grade supply chain security.
+site_author: Getup
 copyright: Copyright &copy; Getup
 nav:
   - About Quor: index.md

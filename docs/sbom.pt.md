@@ -1,3 +1,8 @@
+---
+description: O que é um SBOM, como o Quor gera e assina, e como usá-lo para auditar componentes e vulnerabilidades em imagens de containers.
+keywords: SBOM, Software Bill of Materials, auditoria de imagens, segurança da cadeia de suprimentos, SBOM assinado
+---
+
 # SBOM
 
 ## Introdução

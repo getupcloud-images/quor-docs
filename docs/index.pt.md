@@ -1,3 +1,8 @@
+---
+description: O Quor é um catálogo de imagens de containers seguras, com zero ou próximo de zero CVEs, assinadas e com SBOM para segurança da cadeia de software.
+keywords: segurança de containers, imagens de containers seguras, imagens sem CVE, SBOM, supply chain de software, Kubernetes
+---
+
 # Sobre Quor
 
 ## O desafio da segurança em containers

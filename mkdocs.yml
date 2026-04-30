@@ -1,6 +1,8 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 site_name: Quor
 site_url: https://docs.quor.dev
+site_description: Documentation for Quor, a catalog of secure container images with zero or near-zero CVEs, digital signatures, and SBOMs for production-grade supply chain security.
+site_author: Getup
 copyright: Copyright &copy; Getup
 nav:
   - About Quor: index.md
@@ -54,6 +56,16 @@ plugins:
           name: Português
           build: true
           site_name: Documentação
+          nav_translations:
+            About Quor: Sobre o Quor
+            Internal architecture: Arquitetura interna
+            Getting started: Começando
+            Image catalog: Catálogo de imagens
+            SBOM: SBOM
+            VEX: VEX
+            Image Subscriptions: Subscrições de imagens
+            Accounts and Plans: Contas e planos
+            Vulnerability Attributes: Atributos de uma vulnerabilidade
           admonition_translations:
             note: Nota
 extra:

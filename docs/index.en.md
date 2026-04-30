@@ -1,3 +1,8 @@
+---
+description: Quor is a catalog of secure container images with zero or near-zero CVEs, signed and SBOM-backed for production-grade software supply chain security.
+keywords: container security, secure container images, CVE-free images, SBOM, software supply chain, Kubernetes
+---
+
 # About Quor
 
 ## The challenge of container security

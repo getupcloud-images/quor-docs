@@ -1,3 +1,8 @@
+---
+description: Guia passo a passo para acessar o Quor, criar pull tokens e começar a subscrever imagens de containers seguras.
+keywords: começar com Quor, pull tokens, subscrição de imagens, onboarding Quor
+---
+
 # Começando com o Quor
 
 ## Bem-vindo ao Quor

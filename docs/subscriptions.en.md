@@ -1,3 +1,8 @@
+---
+description: How Quor image subscriptions work — subscribe to catalog images, manage them in your organization, and pull any version or tag with an active plan.
+keywords: image subscriptions, Quor catalog, container image pull, subscribed images management
+---
+
 # Image Subscriptions
 
 Quor is a container image catalog, and its usage model is based on image subscriptions.
@@ -6,7 +11,7 @@ When you subscribe to an image from the catalog, you unlock access to pull any v
 
 To subscribe, you need an active plan, currently available as Trial or Enterprise.
 
-# Managing Subscribed Images
+## Managing Subscribed Images
 
 In the Quor dashboard, under `Settings` > `Organization`, you can view all images your organization has subscribed to.
 

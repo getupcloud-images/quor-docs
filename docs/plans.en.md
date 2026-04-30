@@ -1,3 +1,8 @@
+---
+description: Quor account plans — Trial (14 days free) and Enterprise. Compare features, limits, and how to subscribe to catalog images.
+keywords: Quor plans, Trial plan, Enterprise plan, container image subscriptions, pricing
+---
+
 # Accounts and Plans
 
 Every Quor account can subscribe to images from the catalog, as long as it is linked to an active plan. Currently, Quor offers two types of plans:

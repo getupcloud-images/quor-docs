@@ -1,5 +1,5 @@
 ---
-description: Planos de conta do Quor — Trial (14 dias grátis) e Enterprise. Compare recursos, limites e como subscrever imagens do catálogo.
+description: Planos do Quor — Trial (14 dias grátis) e Enterprise. Compare recursos, limites e como subscrever imagens do catálogo.
 keywords: planos Quor, plano Trial, plano Enterprise, subscrição de imagens, preços
 ---
 

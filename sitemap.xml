@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://docs.quor.dev/catalog/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.quor.dev/catalog/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://docs.quor.dev/pt/catalog/"/>
+    </url>
+    <url>
+        <loc>https://docs.quor.dev/getting-started/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.quor.dev/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://docs.quor.dev/pt/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://docs.quor.dev/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.quor.dev/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://docs.quor.dev/pt/"/>
+    </url>
+    <url>
+        <loc>https://docs.quor.dev/internal-architecture/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.quor.dev/internal-architecture/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://docs.quor.dev/pt/internal-architecture/"/>
+    </url>
+    <url>
+        <loc>https://docs.quor.dev/plans/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.quor.dev/plans/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://docs.quor.dev/pt/plans/"/>
+    </url>
+    <url>
+        <loc>https://docs.quor.dev/sbom/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.quor.dev/sbom/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://docs.quor.dev/pt/sbom/"/>
+    </url>
+    <url>
+        <loc>https://docs.quor.dev/subscriptions/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.quor.dev/subscriptions/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://docs.quor.dev/pt/subscriptions/"/>
+    </url>
+    <url>
+        <loc>https://docs.quor.dev/vex/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.quor.dev/vex/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://docs.quor.dev/pt/vex/"/>
+    </url>
+    <url>
+        <loc>https://docs.quor.dev/vulnerability-attributes/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.quor.dev/vulnerability-attributes/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://docs.quor.dev/pt/vulnerability-attributes/"/>
+    </url>
+    <url>
+        <loc>https://docs.quor.dev/pt/catalog/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://docs.quor.dev/pt/catalog/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.quor.dev/catalog/"/>
+    </url>
+    <url>
+        <loc>https://docs.quor.dev/pt/getting-started/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://docs.quor.dev/pt/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.quor.dev/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://docs.quor.dev/pt/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://docs.quor.dev/pt/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.quor.dev/"/>
+    </url>
+    <url>
+        <loc>https://docs.quor.dev/pt/internal-architecture/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://docs.quor.dev/pt/internal-architecture/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.quor.dev/internal-architecture/"/>
+    </url>
+    <url>
+        <loc>https://docs.quor.dev/pt/plans/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://docs.quor.dev/pt/plans/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.quor.dev/plans/"/>
+    </url>
+    <url>
+        <loc>https://docs.quor.dev/pt/sbom/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://docs.quor.dev/pt/sbom/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.quor.dev/sbom/"/>
+    </url>
+    <url>
+        <loc>https://docs.quor.dev/pt/subscriptions/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://docs.quor.dev/pt/subscriptions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.quor.dev/subscriptions/"/>
+    </url>
+    <url>
+        <loc>https://docs.quor.dev/pt/vex/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://docs.quor.dev/pt/vex/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.quor.dev/vex/"/>
+    </url>
+    <url>
+        <loc>https://docs.quor.dev/pt/vulnerability-attributes/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://docs.quor.dev/pt/vulnerability-attributes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.quor.dev/vulnerability-attributes/"/>
+    </url>
+</urlset>

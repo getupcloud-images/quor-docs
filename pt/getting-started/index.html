@@ -1,0 +1,1061 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guia passo a passo para acessar o Quor, criar pull tokens e começar a subscrever imagens de containers seguras.">
+      
+      
+        <meta name="author" content="Getup">
+      
+      
+        <link rel="canonical" href="https://docs.quor.dev/pt/getting-started/">
+      
+      
+        <link rel="prev" href="../internal-architecture/">
+      
+      
+        <link rel="next" href="../catalog/">
+      
+      
+        
+          <link rel="alternate" href="../../getting-started/" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="pt">
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Começando - Documentação</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-Z2P72X4VM5"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-Z2P72X4VM5",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-Z2P72X4VM5",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  
+  
+  
+  
+  
+  
+
+  <meta name="description" content="Guia passo a passo para acessar o Quor, criar pull tokens e começar a subscrever imagens de containers seguras.">
+  
+  <meta name="keywords" content="começar com Quor, pull tokens, subscrição de imagens, onboarding Quor">
+  
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Quor">
+  <meta property="og:title" content="Começando - Quor">
+  <meta property="og:description" content="Guia passo a passo para acessar o Quor, criar pull tokens e começar a subscrever imagens de containers seguras.">
+  <meta property="og:url" content="https://docs.quor.dev/pt/getting-started/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="https://docs.quor.dev/assets/cover.png">
+  <meta property="og:image:alt" content="Quor">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Começando - Quor">
+  <meta name="twitter:description" content="Guia passo a passo para acessar o Quor, criar pull tokens e começar a subscrever imagens de containers seguras.">
+  <meta name="twitter:image" content="https://docs.quor.dev/assets/cover.png">
+
+  
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#comecando-com-o-quor" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../" title="Documentação" class="md-header__button md-logo" aria-label="Documentação" data-md-component="logo">
+      <img id="logo_light" src="../../assets/logo.svg" alt="Quor documentation">
+<img id="logo_dark" src="../../assets/logo-dark.svg" alt="" aria-hidden="true">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentação
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Começando
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Selecione o idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../getting-started/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Documentação" class="md-nav__button md-logo" aria-label="Documentação" data-md-component="logo">
+      <img id="logo_light" src="../../assets/logo.svg" alt="Quor documentation">
+<img id="logo_dark" src="../../assets/logo-dark.svg" alt="" aria-hidden="true">
+    </a>
+    Documentação
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre o Quor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../internal-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura interna
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Começando
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Começando
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bem-vindo-ao-quor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bem-vindo ao Quor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primeiro-acesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primeiro acesso
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tokens
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tokens">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criando-um-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criando um token
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autenticacao-no-registry-com-docker-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autenticação no registry com docker login
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtendo-o-path-da-imagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obtendo o path da imagem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start-exemplo-com-imagem-caddy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start: Exemplo com imagem Caddy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Start: Exemplo com imagem Caddy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requisitos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplos-de-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplos de deploy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proximos-passos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Próximos passos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catálogo de imagens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sbom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SBOM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VEX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../subscriptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Subscrições de imagens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contas e planos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vulnerability-attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atributos de uma vulnerabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bem-vindo-ao-quor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bem-vindo ao Quor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primeiro-acesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primeiro acesso
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tokens
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tokens">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criando-um-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criando um token
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autenticacao-no-registry-com-docker-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autenticação no registry com docker login
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtendo-o-path-da-imagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obtendo o path da imagem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start-exemplo-com-imagem-caddy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start: Exemplo com imagem Caddy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Start: Exemplo com imagem Caddy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requisitos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplos-de-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplos de deploy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proximos-passos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Próximos passos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="comecando-com-o-quor">Começando com o Quor<a class="headerlink" href="#comecando-com-o-quor" title="Permanent link">&para;</a></h1>
+<h2 id="bem-vindo-ao-quor">Bem-vindo ao Quor<a class="headerlink" href="#bem-vindo-ao-quor" title="Permanent link">&para;</a></h2>
+<p>Para começar a usar, acesse a interface do Quor em: <a href="https://app.quor.dev">app.quor.dev</a></p>
+<h2 id="primeiro-acesso">Primeiro acesso<a class="headerlink" href="#primeiro-acesso" title="Permanent link">&para;</a></h2>
+<p>No primeiro login (usando GitHub, Microsoft ou Gmail), o Quor automaticamente:</p>
+<ul>
+<li>Cria sua conta de usuário.</li>
+<li>Vincula uma organização ao seu usuário.</li>
+<li>Ativa o plano Trial.</li>
+<li>Cria o grupo de administradores (admin), com todas as permissões para gerenciar a interface.</li>
+</ul>
+<p><img alt="Tela de login do Quor" src="../../assets/login-screen.png" /></p>
+<p>Após a criação da conta, você passa a ter acesso à interface do Quor e pode visualizar a sessão <strong>Explore Images</strong>.</p>
+<p>Nela estão listadas as imagens do catálogo, às quais você pode realizar uma subscrição, incluindo:</p>
+<ul>
+<li>Versões disponíveis da imagem;</li>
+<li>Metadados e especificações técnicas.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Importante</p>
+<p>Para fazer pull ou verificar uma imagem, é necessário ter uma subscrição ativa (Trial ou Enterprise) para a organização, além de criar um token para autenticação.</p>
+</div>
+<h2 id="tokens">Tokens<a class="headerlink" href="#tokens" title="Permanent link">&para;</a></h2>
+<p>O token de acesso é a credencial utilizada para autenticar no registro do Quor. Ele é o elemento que autoriza a operação de pull de imagens subscritas e, portanto, deve ser tratado como um segredo.</p>
+<h3 id="criando-um-token">Criando um token<a class="headerlink" href="#criando-um-token" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Logado no Quor, vá até <strong>Pull Tokens</strong>.</li>
+<li>Clique em <strong>Create Token</strong>.</li>
+</ol>
+<p><img alt="Página de configuração de Pull Tokens" src="../../assets/pull-tokens-settings.png" /></p>
+<ol>
+<li>Informe uma descrição para identificar o token.</li>
+<li>Defina uma data de expiração (obrigatoriamente dentro do período de até 1 ano).</li>
+</ol>
+<p><img alt="Modal de criação de token" src="../../assets/create-token-modal.png" /></p>
+<ol>
+<li>Confirme a criação.</li>
+<li>Após criado, será exibido o comando <code>docker login</code>, que contém os dados para autenticação no registry.</li>
+</ol>
+<p><img alt="Token gerado com sucesso" src="../../assets/token-generated.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Importante</p>
+<ul>
+<li>Apenas usuários com permissão de administrador podem gerar tokens.</li>
+<li>As informações do token são exibidas apenas uma vez no momento da criação; os dados não poderão ser recuperados.</li>
+<li>Se o token for perdido ou exposto, será necessário revogá-lo e criar um novo.</li>
+</ul>
+</div>
+<h2 id="autenticacao-no-registry-com-docker-login">Autenticação no registry com docker login<a class="headerlink" href="#autenticacao-no-registry-com-docker-login" title="Permanent link">&para;</a></h2>
+<p>Para acessar e baixar imagens do Quor, é necessário autenticar-se no registro do Quor, localizado em: <code>registry.quor.dev</code></p>
+<p>Autentique-se no registro do Quor usando o comando exibido no campo <strong>docker login command</strong> no momento da criação do token. Esse comando mantém sua sessão ativa até que o token expire, sem necessidade de usar um token inline.</p>
+<p><strong>Exemplo:</strong></p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>login<span class="w"> </span>registry.quor.dev<span class="w"> </span>-u<span class="w"> </span><span class="s1">&#39;&lt;USERNAME&gt;&#39;</span><span class="w"> </span>-p<span class="w"> </span><span class="s1">&#39;&lt;TOKEN&gt;&#39;</span>
+</code></pre></div>
+<p>Uma vez autenticado, você pode fazer pull de qualquer imagem incluída na sua subscrição (Trial ou Enterprise).</p>
+<h2 id="obtendo-o-path-da-imagem">Obtendo o path da imagem<a class="headerlink" href="#obtendo-o-path-da-imagem" title="Permanent link">&para;</a></h2>
+<p>Após realizar a subscrição de uma imagem, o path correspondente é exibido na interface do Quor. Esse path deve ser copiado e utilizado nos comandos <code>docker pull</code> para baixar a imagem.</p>
+<p><strong>Exemplo:</strong></p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>pull<span class="w"> </span>registry.quor.dev/default/&lt;IMAGE&gt;:&lt;TAG&gt;
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Quando o token expirar, será necessário executar novamente o <code>docker login</code> com um token válido para continuar trabalhando.</p>
+</div>
+<h2 id="quick-start-exemplo-com-imagem-caddy">Quick Start: Exemplo com imagem Caddy<a class="headerlink" href="#quick-start-exemplo-com-imagem-caddy" title="Permanent link">&para;</a></h2>
+<p>A seguir, um exemplo prático de como utilizar uma imagem segura do Quor em seu ambiente.</p>
+<h3 id="requisitos">Requisitos<a class="headerlink" href="#requisitos" title="Permanent link">&para;</a></h3>
+<p>Para acessar esta imagem, sua organização deve ter:</p>
+<ul>
+<li>Um plano Quor ativo com subscrições de imagem disponíveis.</li>
+<li>Uma subscrição para a imagem desejada (clique em "Subscribe to image").</li>
+<li>Um Pull Token válido, já configurado no seu Docker CLI (<code>docker login</code>).</li>
+</ul>
+<h3 id="uso">Uso<a class="headerlink" href="#uso" title="Permanent link">&para;</a></h3>
+<p>Comece fazendo pull da imagem caddy usando qualquer versão disponível na aba Versions:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>pull<span class="w"> </span>registry.quor.dev/default/caddy:2.10-alpine
+</code></pre></div>
+<p>Para ambientes de produção, recomendamos hospedar a imagem no registry da sua própria organização ou configurar um mirror.</p>
+<p>Para copiar a imagem de container junto com suas attestations e assinaturas, use <code>cosign</code> em vez do tradicional <code>docker tag</code> + <code>docker push</code>:</p>
+<div class="highlight"><pre><span></span><code>cosign<span class="w"> </span>copy<span class="w"> </span>registry.quor.dev/default/caddy:2.10-alpine<span class="w"> </span>&lt;YOUR-REGISTRY&gt;/caddy:2.10-alpine
+</code></pre></div>
+<h3 id="exemplos-de-deploy">Exemplos de deploy<a class="headerlink" href="#exemplos-de-deploy" title="Permanent link">&para;</a></h3>
+<p>Abaixo estão exemplos mostrando como esta imagem pode ser implantada no Kubernetes ou outros ambientes. Substitua todos os placeholders (<code>&lt;...&gt;</code>) com valores específicos do seu ambiente.</p>
+<p><strong>Atualizar um Deployment no Kubernetes:</strong></p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span><span class="nb">set</span><span class="w"> </span>image<span class="w"> </span>deployment/caddy<span class="w"> </span>&lt;CONTAINER-NAME&gt;<span class="o">=</span>&lt;YOUR-REGISTRY&gt;/caddy:2.10-alpine
+</code></pre></div>
+<p><strong>Upgrade de um Helm Release:</strong></p>
+<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>upgrade<span class="w"> </span>&lt;RELEASE-NAME&gt;<span class="w"> </span>&lt;CHART&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span>path.to.repository<span class="o">=</span>&lt;YOUR-REGISTRY&gt;/caddy<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span>path.to.tag<span class="o">=</span><span class="m">2</span>.10-alpine<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--wait<span class="w"> </span>--reuse-values
+</code></pre></div>
+<p><strong>Imagem base em um Dockerfile:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">&lt;YOUR-REGISTRY&gt;/caddy:2.10-alpine</span>
+</code></pre></div>
+<h3 id="proximos-passos">Próximos passos<a class="headerlink" href="#proximos-passos" title="Permanent link">&para;</a></h3>
+<p>Para uma experiência tranquila e segura:</p>
+<ul>
+<li><strong>Valide a imagem</strong> no seu ambiente para garantir que ela atende aos seus requisitos operacionais e de segurança.</li>
+<li><strong>Mantenha a imagem atualizada</strong> para se beneficiar das últimas correções de segurança e melhorias.</li>
+</ul>
+<p>Para quaisquer problemas, dúvidas ou feedback, <a href="https://quor.dev">entre em contato</a>.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Getup
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

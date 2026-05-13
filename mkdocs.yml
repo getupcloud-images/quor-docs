@@ -14,6 +14,7 @@ nav:
   - Image Subscriptions: subscriptions.md
   - Accounts and Plans: plans.md
   - Vulnerability Attributes: vulnerability-attributes.md
+  - Webhooks: webhooks.md
 theme:
   name: material
   custom_dir: docs/overrides

@@ -47,8 +47,11 @@ Coming soon:
     
 3. Enter a name to help identify the webhook and a valid HTTPS URL
 4. Select which subscribed images and events should trigger the webhook.
+!!! info "Important"
+    If All subscribed images is selected, images subscribed after the webhook is created will also be considered.
 5. Optionally click **Test connection** to validate the endpoint before saving.
 6. Create the webhook.
+
 
 ![Creating a webhook in Quor](assets/webhooks/create.png)
 

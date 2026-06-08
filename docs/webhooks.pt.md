@@ -3,7 +3,7 @@
 Webhooks permitem que serviços externos sejam notificados quando eventos acontecem no Quor.
 Isso pode ser usado para automatizar fluxos de trabalho ou disparar ações fora da plataforma.
 
-Um caso de uso comum é ser notificado quando uma imagem inscrita é atualizada,
+Um caso de uso comum é ser notificado quando uma imagem subscrita é atualizada,
 para que você possa reconstruir ou reimplantar workloads usando a versão mais recente.
 Isso ajuda a evitar continuar executando imagens desatualizadas mesmo após as vulnerabilidades terem sido corrigidas.
 
@@ -27,7 +27,7 @@ Comportamento adicional:
 
 Atualmente suportados:
 
-- **Imagem atualizada** — disparado quando qualquer versão/tag de uma imagem inscrita é atualizada.
+- **Imagem atualizada** — disparado quando qualquer versão/tag de uma imagem subscrita é atualizada.
 
 Em breve:
 
@@ -46,9 +46,9 @@ Em breve:
     ![Botão de adicionar webhook no Quor](assets/webhooks/add.png)
     
 3. Informe um nome para ajudar a identificar o webhook e uma URL HTTPS válida
-4. Selecione quais imagens inscritas e eventos devem disparar o webhook.
+4. Selecione quais imagens subscritas e eventos devem disparar o webhook.
 !!! info "Importante"
-    Se a opção Todas as imagens inscritas estiver selecionada, imagens inscritas após a criação do webhook também serão consideradas.
+    Se a opção Todas as imagens subscritas estiver selecionada, imagens subscritas após a criação do webhook também serão consideradas.
 5. Opcionalmente, clique em **Testar conexão** para validar o endpoint antes de salvar.
 6. Crie o webhook.
 

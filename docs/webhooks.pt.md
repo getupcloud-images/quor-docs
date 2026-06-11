@@ -3,9 +3,7 @@
 Webhooks permitem que serviços externos sejam notificados quando eventos acontecem no Quor.
 Isso pode ser usado para automatizar fluxos de trabalho ou disparar ações fora da plataforma.
 
-Um caso de uso comum é ser notificado quando uma imagem subscrita é atualizada,
-para que você possa reconstruir ou reimplantar workloads usando a versão mais recente.
-Isso ajuda a evitar continuar executando imagens desatualizadas mesmo após as vulnerabilidades terem sido corrigidas.
+Um caso de uso comum é notificar o time quando uma imagem subscrita é atualizada, permitindo reconstruir aplicações ou reimplantar workloads com a versão mais recente. Assim, o ambiente passa menos tempo rodando imagens afetadas por CVEs depois que a correção já está disponível no catálogo.
 
 ## Como funciona
 

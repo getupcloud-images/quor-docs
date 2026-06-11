@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {% set brand = 'Quor' %}
+  {% set base_url = config.site_url.rstrip('/') %}
+  {% set page_description = page.meta.description if page and page.meta and page.meta.description else config.site_description %}
+  {% set page_title = page.title ~ ' - ' ~ brand if page and page.title and not page.is_homepage else brand %}
+  {% set page_url = page.canonical_url if page and page.canonical_url else config.site_url %}
+  {% set page_image = base_url ~ '/assets/cover.png' %}
+
+  <meta name="description" content="{{ page_description }}">
+  {% if page and page.meta and page.meta.keywords %}
+  <meta name="keywords" content="{{ page.meta.keywords }}">
+  {% endif %}
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ brand }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:url" content="{{ page_url }}">
+  <meta property="og:locale" content="{{ 'pt_BR' if config.theme.language == 'pt' else 'en_US' }}">
+  <meta property="og:image" content="{{ page_image }}">
+  <meta property="og:image:alt" content="{{ brand }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ page_description }}">
+  <meta name="twitter:image" content="{{ page_image }}">
+
+  {% if page and page.is_homepage %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ brand }}",
+    "url": "{{ base_url }}",
+    "logo": "{{ page_image }}",
+    "description": "{{ config.site_description }}",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Getup"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ brand }}",
+    "url": "{{ base_url }}",
+    "inLanguage": ["en", "pt-BR"]
+  }
+  </script>
+  {% endif %}
+{% endblock %}

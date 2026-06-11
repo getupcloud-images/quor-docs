@@ -1,0 +1,19 @@
+:root {
+    --md-text-font: "Inter",sans-serif;
+}
+
+body {
+    font-family: Inter,sans-serif;
+}
+
+[data-md-color-scheme=slate] .md-header {
+    background-color: #131A26;
+}
+
+[data-md-color-scheme=default] #logo_dark {
+    display: none;
+}
+
+[data-md-color-scheme=slate] #logo_light {
+    display: none;
+}

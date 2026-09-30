@@ -5,34 +5,29 @@ keywords: container image catalog, Quor images, secure images, image versions, S
 
 # Image catalog
 
-## Explore Images
+## Browse images
 
-In the **Explore Images** section, you have access to the complete Quor image catalog.
+The Browse images section displays the image catalog as cards, allowing you to quickly identify images and view the percentage reduction in vulnerabilities compared to the public image for each container.
 
-![Explore Images screen](assets/explore-images.png)
+![Images](assets/catalog/explore-images.png)
 
-The list displays, for each image:
+For each image, the following actions are available:
 
-- Name;
-- Last update date;
-- Category(ies) (e.g.: Kubernetes, Monitoring & Observability);
-- Available action (PULL):
-    - **Subscribe to image** → for images available on your plan;
-    - **Contact us** → for images available only on the Enterprise plan (Trial users);
-    - **Docker pull command** → for images already subscribed and ready to use.
+- **Subscribe to image** → for images available in your current plan;
+- **Contact us** → for images available only on the Enterprise plan (after the Trial);
+- **`docker pull` command** → for images you have already subscribed to and are ready to use.
 
 !!! note "Important"
 
-    The image path (required for `docker pull`) is only displayed after subscription.
+    The image path (required for `docker pull`) is only displayed after you subscribe to the image.
 
-In addition to the list, the screen offers features to locate specific images:
+In addition to the image list, the page provides several options for finding specific images:
 
-- **Search bar**: search by name (e.g.: nginx, node, prometheus).
-- **Side filters**:
-    - **Categories**: Kubernetes, Monitoring & Observability, Web servers, Database & storage, Languages & frameworks, Security, Networking;
-    - **Architectures**: amd64, arm64;
-    - **Distro/Base image**: alpine, distroless.
-- **Only subscribed images**: toggle to display only images already subscribed by your organization.
+- **Text search:** Search for images directly by name (e.g., `node`, `nginx`, `argocd`).
+- **Only subscribed images:** Toggle the view to display only images that your organization is actively subscribed to.
+- **Categories:** Filter the catalog by use case (_Languages & frameworks_, _Integration & delivery_, _Networking_, _Security_, _Message queues_, etc.).
+- **Architectures:** Filter images by processor architecture (_x86-64_, _ARM 64_).
+- **Distro/Base image:** Filter images by their base Linux distribution (e.g., _Alpine_, _Distroless_).
 
 ## Image details
 

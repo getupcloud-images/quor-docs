@@ -5,34 +5,29 @@ keywords: catálogo de imagens de containers, imagens Quor, imagens seguras, ver
 
 # Catálogo de imagens
 
-## Explore Images
+## Browse images
 
-Na sessão **Explore Images**, você tem acesso ao catálogo completo de imagens do Quor.
+A seção Browse images exibe o catálogo de imagens em formato de cards, permitindo a identificação rápida e o acesso à porcentagem de redução de vulnerabilidades em relação a imagem pública de cada container.
 
-![Tela Explore Images](assets/explore-images.png)
+![Imagens](assets/catalog/explore-images.png)
 
-A lista apresenta, para cada imagem:
+Para cada imagem, tem-se a seguintes ações disponíveis:
 
-- Nome;
-- Data da última atualização;
-- Categoria(s) (ex.: Kubernetes, Monitoring & Observability);
-- Ação disponível (PULL):
-    - **Subscribe to image** → para imagens disponíveis no seu plano;
-    - **Contact us** → para imagens disponíveis apenas no plano Enterprise (usuários Trial);
-    - **Comando docker pull** → para imagens já subscritas e prontas para uso.
+- **Subscribe to image** → para imagens disponíveis no seu plano;
+- **Contact us** → para imagens disponíveis apenas no plano Enterprise (pós Trial);
+- **Comando docker pull** → para imagens já subscritas e prontas para uso.
 
 !!! note "Importante"
 
-    O path da imagem (necessário para o `docker pull`) só é exibido após a subscrição.
+    O path da imagem (necessário para o docker pull) só é exibido após a subscrição.
 
-Além da lista, a tela oferece recursos para localizar imagens específicas:
+Além da lista, a tela oferece recursos para localizar imagens específicas.
 
-- **Barra de busca**: pesquisa por nome (ex.: nginx, node, prometheus).
-- **Filtros laterais**:
-    - **Categories**: Kubernetes, Monitoring & Observability, Web servers, Database & storage, Languages & frameworks, Security, Networking;
-    - **Architectures**: amd64, arm64;
-    - **Distro/Base image**: alpine, distroless.
-- **Only subscribed images**: toggle para exibir apenas as imagens já subscritas pela sua organização.
+- **Busca por texto:** Permite pesquisar imagens diretamente pelo nome (ex.: node, nginx, argocd).
+- **Only subscribed images:** Alterna a visualização para exibir apenas as imagens com inscrição ativa na sua organização.
+- **Categories:** Filtra o catálogo por caso de uso (_Languages & frameworks_, _Integration & delivery_, _Networking_, _Security_, _Message queues_, etc.).
+- **Architectures:** Filtra as imagens por arquitetura de processador (_x86-64_, _ARM 64_).
+- **Distro/Base image:** Filtra imagens pela distribuição Linux base (ex.: _Alpine_, _Distroless_).
 
 ## Detalhes da imagem
 

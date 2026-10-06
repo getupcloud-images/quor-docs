@@ -29,6 +29,63 @@ Além da lista, a tela oferece recursos para localizar imagens específicas.
 - **Architectures:** Filtra as imagens por arquitetura de processador (_x86-64_, _ARM 64_).
 - **Distro/Base image:** Filtra imagens pela distribuição Linux base (ex.: _Alpine_, _Distroless_).
 
+## Comparação de imagens
+
+Apresentação detalhada da postura de segurança, tamanho e composição entre a imagem do Quor e a imagem pública correspondente.
+
+![Comparação de imagens](assets/catalog/image-details/comparison-1.png)
+
+### **Componentes da comparação**
+
+**Filtros:**
+
+- **Version:** Define a tag ou versão da imagem a ser analisada (ex.: Latest).
+- **Period:** Define a janela temporal do gráfico histórico (ex.: Last month).
+
+**Métricas principais:**
+
+Apresenta o endereço de registro (_registry URL_) de cada imagem e compara os seguintes indicadores:
+
+- CVEs: Quantidade total de vulnerabilidades conhecidas e o percentual de redução obtido (ex.: 8 vs. 177, com redução de `⬇ 95,5%`).
+- Packages: Quantidade de pacotes e dependências instaladas em cada imagem.
+- Compressed size: Tamanho comprimido da imagem em megabytes, demonstrando a redução no consumo de transferência e armazenamento.
+
+**Vulnerabilidades por severidade**
+
+Detalhamento das vulnerabilidades por nível de severidade (_Critical_, _High_, _Medium_, _Low_, _Unknown_):
+
+- Exibe a comparação direta do número de falhas (Quor vs. Public) e o percentual de mitigação atingido em cada nível (ex.: 0 vs. 12 com ⬇ 100% de redução em falhas críticas).
+
+**Gráficos de evolução temporal**  
+Dois gráficos de área comparam o histórico de vulnerabilidades da imagem do Quor em relação à imagem pública ao longo do período selecionado:
+
+- Exibe a variação diária de CVEs identificadas.
+- Utiliza cores correspondentes à gravidade para demonstrar a estabilidade da imagem ao longo do tempo.
+
+**Atestações e Conformidade**  
+Compara a presença de atestados de segurança e artefatos de conformidade em cada build:
+
+- **Quor image:** Lista as atestações ativas e verificadas, como SLSA provenance, Cyclone DX SBOM, SPDX SBOM e declarações VEX.
+- **Public image:** Sinaliza a ausência de atestações de segurança (_No attestations_).
+
+**Comparativo do Tamanho Comprimido**  
+Um gráfico de barras dedicado que ilustra visualmente a diferença de peso entre as duas imagens, exibindo a porcentagem exata de otimização (ex.: ⬇ 78% smaller).
+
+![Comparativo do Tamanho Comprimido](assets/catalog/image-details/comparison-2.png)
+
+**Detalhes de Vulnerabilidades e Pacotes**
+
+Na parte inferior da tela, painéis lado a lado permitem uma auditoria granular da segurança e da composição das imagens:
+
+- Vulnerabilidades (Vulnerabilities details): Lista cada registro de falha ativa por CVE ID e nível de Severity (ex.: _Low_, _Critical_, _High_). A paginação facilita a navegação e evidencia a drástica diferença no volume de ameaças (ex.: 2 páginas na imagem Quor vs. 36 páginas na imagem pública).
+- Pacotes (Packages details): Exibe a contagem total e a lista de componentes instalados (ex.: 71 pacotes no Quor vs. 502 na pública). Essa comparação evidencia a remoção de dependências e utilitários não essenciais, o que reduz diretamente a superfície de ataque do container.
+
+![Detalhes de Vulnerabilidades e Pacotes](assets/catalog/image-details/comparison-3.png)
+
+!!!note "Acesso às abas SBOM e Provenance"
+
+    Para informações sobre a composição completa de softwares ou proveniência do build, acesse as abas **SBOM** e **Provenance**.
+
 ## Detalhes da imagem
 
 Ao clicar em uma imagem, você acessa a página de detalhes com informações completas organizadas em abas:

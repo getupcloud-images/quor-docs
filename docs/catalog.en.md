@@ -7,7 +7,7 @@ keywords: container image catalog, Quor images, secure images, image versions, S
 
 ## Browse images
 
-The Browse images section displays the image catalog as cards, allowing you to quickly identify images and view the percentage reduction in vulnerabilities compared to the public image for each container.
+The Browse images section displays the image catalog as cards, allowing you to quickly identify images and view the percentage reduction in vulnerabilities compared to the public image.
 
 ![Images](assets/catalog/explore-images.png)
 

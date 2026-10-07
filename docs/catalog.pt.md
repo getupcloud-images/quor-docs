@@ -7,14 +7,14 @@ keywords: catálogo de imagens de containers, imagens Quor, imagens seguras, ver
 
 ## Browse images
 
-A seção Browse images exibe o catálogo de imagens em formato de cards, permitindo a identificação rápida e o acesso à porcentagem de redução de vulnerabilidades em relação a imagem pública de cada container.
+A seção Browse images exibe o catálogo de imagens em formato de cards, permitindo a identificação rápida e o acesso à porcentagem de redução de vulnerabilidades em relação a imagem pública.
 
 ![Imagens](assets/catalog/explore-images.png)
 
 Para cada imagem, tem-se a seguintes ações disponíveis:
 
-- **Subscribe to image** → para imagens disponíveis no seu plano;
-- **Contact us** → para imagens disponíveis apenas no plano Enterprise (pós Trial);
+- **Subscrever imagem** → para imagens disponíveis no seu plano;
+- **Contate-nos** → para imagens disponíveis apenas no plano Enterprise (pós Trial);
 - **Comando docker pull** → para imagens já subscritas e prontas para uso.
 
 !!! note "Importante"
@@ -24,10 +24,10 @@ Para cada imagem, tem-se a seguintes ações disponíveis:
 Além da lista, a tela oferece recursos para localizar imagens específicas.
 
 - **Busca por texto:** Permite pesquisar imagens diretamente pelo nome (ex.: node, nginx, argocd).
-- **Only subscribed images:** Alterna a visualização para exibir apenas as imagens com inscrição ativa na sua organização.
-- **Categories:** Filtra o catálogo por caso de uso (_Languages & frameworks_, _Integration & delivery_, _Networking_, _Security_, _Message queues_, etc.).
-- **Architectures:** Filtra as imagens por arquitetura de processador (_x86-64_, _ARM 64_).
-- **Distro/Base image:** Filtra imagens pela distribuição Linux base (ex.: _Alpine_, _Distroless_).
+- **Mostrar imagens subscritas:** Alterna a visualização para exibir apenas as imagens com inscrição ativa na sua organização.
+- **Categorias:** Filtra o catálogo por caso de uso (_Languages & frameworks_, _Integration & delivery_, _Networking_, _Security_, _Message queues_, etc.).
+- **Arquteturas:** Filtra as imagens por arquitetura de processador (_x86-64_, _ARM 64_).
+- **Distro/Imagem base:** Filtra imagens pela distribuição Linux base (ex.: _Alpine_, _Distroless_).
 
 ## Comparação de imagens
 
@@ -39,8 +39,8 @@ Apresentação detalhada da postura de segurança, tamanho e composição entre 
 
 **Filtros:**
 
-- **Version:** Define a tag ou versão da imagem a ser analisada (ex.: Latest).
-- **Period:** Define a janela temporal do gráfico histórico (ex.: Last month).
+- **Versão:** Define a tag ou versão da imagem a ser analisada (ex.: Latest).
+- **Período:** Define a janela temporal do gráfico histórico (ex.: Last month).
 
 **Métricas principais:**
 
@@ -65,8 +65,8 @@ Dois gráficos de área comparam o histórico de vulnerabilidades da imagem do Q
 **Atestações e Conformidade**  
 Compara a presença de atestados de segurança e artefatos de conformidade em cada build:
 
-- **Quor image:** Lista as atestações ativas e verificadas, como SLSA provenance, Cyclone DX SBOM, SPDX SBOM e declarações VEX.
-- **Public image:** Sinaliza a ausência de atestações de segurança (_No attestations_).
+- **Imagem Quor:** Lista as atestações ativas e verificadas, como SLSA provenance, Cyclone DX SBOM, SPDX SBOM e declarações VEX.
+- **Imagem Pública:** Sinaliza a ausência de atestações de segurança (_No attestations_).
 
 **Comparativo do Tamanho Comprimido**  
 Um gráfico de barras dedicado que ilustra visualmente a diferença de peso entre as duas imagens, exibindo a porcentagem exata de otimização (ex.: ⬇ 78% smaller).

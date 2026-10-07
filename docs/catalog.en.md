@@ -95,7 +95,7 @@ At the bottom of the screen, side-by-side panels allow a granular audit of the s
 
 When you click on an image, you access the details page with complete information organized in tabs:
 
-![Image details - Versions](assets/image-details-versions.png)
+![Image details - Versions](assets/catalog/versions.png)
 
 ### Versions
 
@@ -113,7 +113,7 @@ Technical specifications of the image, such as architecture, size, and configura
 
 The **SBOM (Software Bill of Materials)** lists all packages contained in the image, with their respective licenses. You can select the desired version and architecture and download the complete SBOM.
 
-![Image details - SBOM](assets/image-details-sbom.png)
+![Image details - SBOM](assets/catalog/sbom.png)
 
 ### Provenance
 
@@ -124,7 +124,7 @@ For all images and versions, this evidence set includes SBOM, signature, provena
 
 The **Changelog** displays the vulnerability history of the image over time. It includes an evolution graph and a detailed list of detected vulnerabilities, with CVE ID, severity, affected package, version, and fix status.
 
-![Image details - Changelog](assets/image-details-changelog.png)
+![Image details - Changelog](assets/catalog/changelog.png)
 
 ## Requesting new images
 

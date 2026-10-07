@@ -93,7 +93,7 @@ Um gráfico de barras dedicado que ilustra visualmente a diferença de peso entr
 
 Ao clicar em uma imagem, você acessa a página de detalhes com informações completas organizadas em abas:
 
-![Detalhes da imagem - Versions](assets/image-details-versions.png)
+![Detalhes da imagem - Versions](assets/catalog/versions.png)
 
 ### Versions
 
@@ -111,7 +111,7 @@ Especificações técnicas da imagem, como arquitetura, tamanho e configuraçõe
 
 O **SBOM (Software Bill of Materials)** lista todos os pacotes contidos na imagem, com suas respectivas licenças. Você pode selecionar a versão e arquitetura desejadas e fazer download do SBOM completo.
 
-![Detalhes da imagem - SBOM](assets/image-details-sbom.png)
+![Detalhes da imagem - SBOM](assets/catalog/sbom.png)
 
 ### Provenance
 
@@ -122,7 +122,7 @@ Para todas as imagens e versões, esse conjunto inclui SBOM, assinatura, atestad
 
 O **Changelog** exibe o histórico de vulnerabilidades da imagem ao longo do tempo. Inclui um gráfico de evolução e uma lista detalhada das vulnerabilidades detectadas, com CVE ID, severidade, pacote afetado, versão e status de correção.
 
-![Detalhes da imagem - Changelog](assets/image-details-changelog.png)
+![Detalhes da imagem - Changelog](assets/catalog/changelog.png)
 
 ## Solicitar novas imagens
 

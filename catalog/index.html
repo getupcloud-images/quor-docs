@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -37,7 +37,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -445,10 +445,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#explore-images" class="md-nav__link">
+  <a href="#browse-images" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Explore Images
+        Browse images
       
     </span>
   </a>
@@ -486,6 +486,34 @@
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image comparison
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Image comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparison-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison components
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -763,10 +791,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#explore-images" class="md-nav__link">
+  <a href="#browse-images" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Explore Images
+        Browse images
       
     </span>
   </a>
@@ -804,6 +832,34 @@
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image comparison
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Image comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparison-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison components
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -902,54 +958,97 @@
 
 
 <h1 id="image-catalog">Image catalog<a class="headerlink" href="#image-catalog" title="Permanent link">&para;</a></h1>
-<h2 id="explore-images">Explore Images<a class="headerlink" href="#explore-images" title="Permanent link">&para;</a></h2>
-<p>In the <strong>Explore Images</strong> section, you have access to the complete Quor image catalog.</p>
-<p><img alt="Explore Images screen" src="../assets/explore-images.png" /></p>
-<p>The list displays, for each image:</p>
+<h2 id="browse-images">Browse images<a class="headerlink" href="#browse-images" title="Permanent link">&para;</a></h2>
+<p>The Browse images section displays the image catalog as cards, allowing you to quickly identify images and view the percentage reduction in vulnerabilities compared to the public image.</p>
+<p><img alt="Images" src="../assets/catalog/explore-images.png" /></p>
+<p>For each image, the following actions are available:</p>
 <ul>
-<li>Name;</li>
-<li>Last update date;</li>
-<li>Category(ies) (e.g.: Kubernetes, Monitoring &amp; Observability);</li>
-<li>Available action (PULL):<ul>
-<li><strong>Subscribe to image</strong> → for images available on your plan;</li>
-<li><strong>Contact us</strong> → for images available only on the Enterprise plan (Trial users);</li>
-<li><strong>Docker pull command</strong> → for images already subscribed and ready to use.</li>
-</ul>
-</li>
+<li><strong>Subscribe to image</strong> → for images available in your current plan;</li>
+<li><strong>Contact us</strong> → for images available only on the Enterprise plan (after the Trial);</li>
+<li><strong><code>docker pull</code> command</strong> → for images you have already subscribed to and are ready to use.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Important</p>
-<p>The image path (required for <code>docker pull</code>) is only displayed after subscription.</p>
+<p>The image path (required for <code>docker pull</code>) is only displayed after you subscribe to the image.</p>
 </div>
-<p>In addition to the list, the screen offers features to locate specific images:</p>
+<p>In addition to the image list, the page provides several options for finding specific images:</p>
 <ul>
-<li><strong>Search bar</strong>: search by name (e.g.: nginx, node, prometheus).</li>
-<li><strong>Side filters</strong>:<ul>
-<li><strong>Categories</strong>: Kubernetes, Monitoring &amp; Observability, Web servers, Database &amp; storage, Languages &amp; frameworks, Security, Networking;</li>
-<li><strong>Architectures</strong>: amd64, arm64;</li>
-<li><strong>Distro/Base image</strong>: alpine, distroless.</li>
-</ul>
-</li>
-<li><strong>Only subscribed images</strong>: toggle to display only images already subscribed by your organization.</li>
+<li><strong>Text search:</strong> Search for images directly by name (e.g., <code>node</code>, <code>nginx</code>, <code>argocd</code>).</li>
+<li><strong>Only subscribed images:</strong> Toggle the view to display only images that your organization is actively subscribed to.</li>
+<li><strong>Categories:</strong> Filter the catalog by use case (<em>Languages &amp; frameworks</em>, <em>Integration &amp; delivery</em>, <em>Networking</em>, <em>Security</em>, <em>Message queues</em>, etc.).</li>
+<li><strong>Architectures:</strong> Filter images by processor architecture (<em>x86-64</em>, <em>ARM 64</em>).</li>
+<li><strong>Distro/Base image:</strong> Filter images by their base Linux distribution (e.g., <em>Alpine</em>, <em>Distroless</em>).</li>
 </ul>
 <h2 id="image-details">Image details<a class="headerlink" href="#image-details" title="Permanent link">&para;</a></h2>
 <p>When you click on an image, you access the details page with complete information organized in tabs:</p>
-<p><img alt="Image details - Versions" src="../assets/image-details-versions.png" /></p>
+<p><img alt="Image details - Versions" src="../assets/catalog/versions.png" /></p>
 <h3 id="versions">Versions<a class="headerlink" href="#versions" title="Permanent link">&para;</a></h3>
 <p>Lists all available versions of the image, with update date and <code>docker pull</code> command for each one. When clicking on a specific version, you can view its packages and vulnerabilities, as well as scan instructions.</p>
 <h3 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h3>
 <p>Quick guide with usage instructions for the image, including deployment examples for Kubernetes, Helm, and Dockerfile.</p>
+<h3 id="image-comparison">Image comparison<a class="headerlink" href="#image-comparison" title="Permanent link">&para;</a></h3>
+<p>A detailed view of the security posture, size, and composition of the Quor image compared to the corresponding public image.</p>
+<p><img alt="Image comparison" src="../assets/catalog/image-details/comparison-1.png" /></p>
+<p class="image-date"><strong>Reference date:</strong> October 7, 2026</p>
+
+<h4 id="comparison-components"><strong>Comparison components</strong><a class="headerlink" href="#comparison-components" title="Permanent link">&para;</a></h4>
+<p><strong>Filters:</strong></p>
+<ul>
+<li><strong>Version:</strong> Sets the image tag or version to analyze (e.g., Latest).</li>
+<li><strong>Period:</strong> Sets the time window for the historical chart (e.g., Last month).</li>
+</ul>
+<p><strong>Key metrics:</strong></p>
+<p>Shows the registry URL of each image and compares the following indicators:</p>
+<ul>
+<li>CVEs: Total number of known vulnerabilities and the percentage reduction achieved (e.g., 8 vs. 177, a <code>⬇ 95.5%</code> reduction).</li>
+<li>Packages: Number of packages and dependencies installed in each image.</li>
+<li>Compressed size: Compressed image size in megabytes, showing the reduction in transfer and storage usage.</li>
+</ul>
+<p><strong>Vulnerabilities by severity</strong></p>
+<p>Breakdown of vulnerabilities by severity level (<em>Critical</em>, <em>High</em>, <em>Medium</em>, <em>Low</em>, <em>Unknown</em>):</p>
+<ul>
+<li>Shows a direct comparison of the number of vulnerabilities (Quor vs. Public) and the mitigation percentage achieved at each level (e.g., 0 vs. 12 with a ⬇ 100% reduction in critical vulnerabilities).</li>
+</ul>
+<p><strong>Vulnerability trend charts</strong><br />
+Two area charts compare the vulnerability history of the Quor image against the public image over the selected period:</p>
+<ul>
+<li>Shows the daily variation in identified CVEs.</li>
+<li>Uses severity-coded colors to show the image's stability over time.</li>
+</ul>
+<p><strong>Attestations and compliance</strong><br />
+Compares the presence of security attestations and compliance artifacts in each build:</p>
+<ul>
+<li><strong>Quor image:</strong> Lists active, verified attestations, such as SLSA provenance, CycloneDX SBOM, SPDX SBOM, and VEX statements.</li>
+<li><strong>Public image:</strong> Indicates the absence of security attestations (<em>No attestations</em>).</li>
+</ul>
+<p><strong>Compressed size comparison</strong><br />
+A dedicated bar chart that visually illustrates the size difference between the two images, showing the exact optimization percentage (e.g., ⬇ 78% smaller).</p>
+<p><img alt="Compressed size comparison" src="../assets/catalog/image-details/comparison-2.png" /></p>
+<p class="image-date"><strong>Reference date:</strong> October 7, 2026</p>
+
+<p><strong>Vulnerability</strong></p>
+<p>At the bottom of the screen, side-by-side panels allow a granular audit of the security and composition of the images:</p>
+<ul>
+<li>Vulnerabilities (Vulnerabilities details): Lists each active vulnerability by CVE ID and Severity level (e.g., <em>Low</em>, <em>Critical</em>, <em>High</em>). Pagination makes navigation easier and highlights the stark difference in threat volume (e.g., 2 pages for the Quor image vs. 36 pages for the public image).</li>
+</ul>
+<p><img alt="Vulnerability details" src="../assets/catalog/image-details/comparison-3.png" /></p>
+<p class="image-date"><strong>Reference date:</strong> October 7, 2026</p>
+
+<div class="admonition note">
+<p class="admonition-title">Access to the SBOM and Provenance tabs</p>
+<p>For information about the full software composition or build provenance, go to the <strong>SBOM</strong> and <strong>Provenance</strong> tabs.</p>
+</div>
 <h3 id="specifications">Specifications<a class="headerlink" href="#specifications" title="Permanent link">&para;</a></h3>
 <p>Technical specifications of the image, such as architecture, size, and configurations.</p>
 <h3 id="sbom">SBOM<a class="headerlink" href="#sbom" title="Permanent link">&para;</a></h3>
 <p>The <strong>SBOM (Software Bill of Materials)</strong> lists all packages contained in the image, with their respective licenses. You can select the desired version and architecture and download the complete SBOM.</p>
-<p><img alt="Image details - SBOM" src="../assets/image-details-sbom.png" /></p>
+<p><img alt="Image details - SBOM" src="../assets/catalog/sbom.png" /></p>
 <h3 id="provenance">Provenance<a class="headerlink" href="#provenance" title="Permanent link">&para;</a></h3>
 <p>Provenance information for the image, attesting to its origin and integrity.
 For all images and versions, this evidence set includes SBOM, signature, provenance attestations, and VEX statements to add exploitability context to vulnerability analysis.</p>
 <h3 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h3>
 <p>The <strong>Changelog</strong> displays the vulnerability history of the image over time. It includes an evolution graph and a detailed list of detected vulnerabilities, with CVE ID, severity, affected package, version, and fix status.</p>
-<p><img alt="Image details - Changelog" src="../assets/image-details-changelog.png" /></p>
+<p><img alt="Image details - Changelog" src="../assets/catalog/changelog.png" /></p>
 <h2 id="requesting-new-images">Requesting new images<a class="headerlink" href="#requesting-new-images" title="Permanent link">&para;</a></h2>
 <p>The Quor catalog is continuously expanded, with new images added in regular cycles. Additionally, users can request the inclusion of specific images.</p>
 <h3 id="request-criteria">Request criteria<a class="headerlink" href="#request-criteria" title="Permanent link">&para;</a></h3>
@@ -971,8 +1070,26 @@ For all images and versions, this evidence set includes SBOM, signature, provena
 
 
   
+    
+  
   
 
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 7, 2026 18:46:15 UTC">October 7, 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
 
 
   
@@ -1019,7 +1136,7 @@ For all images and versions, this evidence set includes SBOM, signature, provena
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

@@ -73,14 +73,11 @@ Um gráfico de barras dedicado que ilustra visualmente a diferença de peso entr
 
 ![Comparativo do Tamanho Comprimido](assets/catalog/image-details/comparison-2.png)
 
-**Detalhes de Vulnerabilidades e Pacotes**
-
-Na parte inferior da tela, painéis lado a lado permitem uma auditoria granular da segurança e da composição das imagens:
+**Detalhes de Vulnerabilidades**
 
 - Vulnerabilidades (Vulnerabilities details): Lista cada registro de falha ativa por CVE ID e nível de Severity (ex.: _Low_, _Critical_, _High_). A paginação facilita a navegação e evidencia a drástica diferença no volume de ameaças (ex.: 2 páginas na imagem Quor vs. 36 páginas na imagem pública).
-- Pacotes (Packages details): Exibe a contagem total e a lista de componentes instalados (ex.: 71 pacotes no Quor vs. 502 na pública). Essa comparação evidencia a remoção de dependências e utilitários não essenciais, o que reduz diretamente a superfície de ataque do container.
 
-![Detalhes de Vulnerabilidades e Pacotes](assets/catalog/image-details/comparison-3.png)
+![Vulnerability details](assets/catalog/image-details/comparison-3.png)
 
 !!!note "Acesso às abas SBOM e Provenance"
 

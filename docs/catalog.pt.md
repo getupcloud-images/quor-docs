@@ -35,6 +35,8 @@ Apresentação detalhada da postura de segurança, tamanho e composição entre 
 
 ![Comparação de imagens](assets/catalog/image-details/comparison-1.png)
 
+<p class="image-date"><strong>Data de referência:</strong> 07/10/2026</p>
+
 ### **Componentes da comparação**
 
 **Filtros:**
@@ -73,11 +75,15 @@ Um gráfico de barras dedicado que ilustra visualmente a diferença de peso entr
 
 ![Comparativo do Tamanho Comprimido](assets/catalog/image-details/comparison-2.png)
 
+<p class="image-date"><strong>Data de referência:</strong> 07/10/2026</p>
+
 **Detalhes de Vulnerabilidades**
 
 - Vulnerabilidades (Vulnerabilities details): Lista cada registro de falha ativa por CVE ID e nível de Severity (ex.: _Low_, _Critical_, _High_). A paginação facilita a navegação e evidencia a drástica diferença no volume de ameaças (ex.: 2 páginas na imagem Quor vs. 36 páginas na imagem pública).
 
 ![Vulnerability details](assets/catalog/image-details/comparison-3.png)
+
+<p class="image-date"><strong>Data de referência:</strong> 07/10/2026</p>
 
 !!!note "Acesso às abas SBOM e Provenance"
 

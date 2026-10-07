@@ -21,7 +21,7 @@ cd quor-docs
 ### Install dependencies
 
 ```bash
-pip install mkdocs-material mkdocs-static-i18n
+pip install mkdocs-material mkdocs-static-i18n mkdocs-git-revision-date-localized-plugin
 ```
 
 ### Run locally

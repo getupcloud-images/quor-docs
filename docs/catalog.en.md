@@ -35,6 +35,8 @@ A detailed view of the security posture, size, and composition of the Quor image
 
 ![Image comparison](assets/catalog/image-details/comparison-1.png)
 
+<p class="image-date"><strong>Reference date:</strong> October 7, 2026</p>
+
 ### **Comparison components**
 
 **Filters:**
@@ -73,6 +75,8 @@ A dedicated bar chart that visually illustrates the size difference between the 
 
 ![Compressed size comparison](assets/catalog/image-details/comparison-2.png)
 
+<p class="image-date"><strong>Reference date:</strong> October 7, 2026</p>
+
 **Vulnerability**
 
 At the bottom of the screen, side-by-side panels allow a granular audit of the security and composition of the images:
@@ -80,6 +84,8 @@ At the bottom of the screen, side-by-side panels allow a granular audit of the s
 - Vulnerabilities (Vulnerabilities details): Lists each active vulnerability by CVE ID and Severity level (e.g., _Low_, _Critical_, _High_). Pagination makes navigation easier and highlights the stark difference in threat volume (e.g., 2 pages for the Quor image vs. 36 pages for the public image).
 
 ![Vulnerability details](assets/catalog/image-details/comparison-3.png)
+
+<p class="image-date"><strong>Reference date:</strong> October 7, 2026</p>
 
 !!! note "Access to the SBOM and Provenance tabs"
 

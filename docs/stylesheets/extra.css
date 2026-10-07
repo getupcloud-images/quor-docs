@@ -17,3 +17,10 @@ body {
 [data-md-color-scheme=slate] #logo_light {
     display: none;
 }
+
+.md-typeset .image-date {
+    text-align: right;
+    margin-top: -0.6em;
+    font-size: 0.6rem;
+    color: var(--md-default-fg-color--light);
+}

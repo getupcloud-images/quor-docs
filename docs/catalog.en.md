@@ -29,7 +29,21 @@ In addition to the image list, the page provides several options for finding spe
 - **Architectures:** Filter images by processor architecture (_x86-64_, _ARM 64_).
 - **Distro/Base image:** Filter images by their base Linux distribution (e.g., _Alpine_, _Distroless_).
 
-## Image comparison
+## Image details
+
+When you click on an image, you access the details page with complete information organized in tabs:
+
+![Image details - Versions](assets/catalog/versions.png)
+
+### Versions
+
+Lists all available versions of the image, with update date and `docker pull` command for each one. When clicking on a specific version, you can view its packages and vulnerabilities, as well as scan instructions.
+
+### Quick Start
+
+Quick guide with usage instructions for the image, including deployment examples for Kubernetes, Helm, and Dockerfile.
+
+### Image comparison
 
 A detailed view of the security posture, size, and composition of the Quor image compared to the corresponding public image.
 
@@ -37,7 +51,7 @@ A detailed view of the security posture, size, and composition of the Quor image
 
 <p class="image-date"><strong>Reference date:</strong> October 7, 2026</p>
 
-### **Comparison components**
+#### **Comparison components**
 
 **Filters:**
 
@@ -90,20 +104,6 @@ At the bottom of the screen, side-by-side panels allow a granular audit of the s
 !!! note "Access to the SBOM and Provenance tabs"
 
     For information about the full software composition or build provenance, go to the **SBOM** and **Provenance** tabs.
-
-## Image details
-
-When you click on an image, you access the details page with complete information organized in tabs:
-
-![Image details - Versions](assets/catalog/versions.png)
-
-### Versions
-
-Lists all available versions of the image, with update date and `docker pull` command for each one. When clicking on a specific version, you can view its packages and vulnerabilities, as well as scan instructions.
-
-### Quick Start
-
-Quick guide with usage instructions for the image, including deployment examples for Kubernetes, Helm, and Dockerfile.
 
 ### Specifications
 

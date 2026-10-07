@@ -29,7 +29,21 @@ Além da lista, a tela oferece recursos para localizar imagens específicas.
 - **Arquteturas:** Filtra as imagens por arquitetura de processador (_x86-64_, _ARM 64_).
 - **Distro/Imagem base:** Filtra imagens pela distribuição Linux base (ex.: _Alpine_, _Distroless_).
 
-## Comparação de imagens
+## Detalhes da imagem
+
+Ao clicar em uma imagem, você acessa a página de detalhes com informações completas organizadas em abas:
+
+![Detalhes da imagem - Versions](assets/catalog/versions.png)
+
+### Versions
+
+Lista todas as versões disponíveis da imagem, com data de atualização e comando `docker pull` para cada uma. Ao clicar em uma versão específica, é possível visualizar seus pacotes e vulnerabilidades, além de instruções de scan.
+
+### Quick Start
+
+Guia rápido com instruções de uso da imagem, incluindo exemplos de deploy em Kubernetes, Helm e Dockerfile.
+
+### Comparação de imagens
 
 Apresentação detalhada da postura de segurança, tamanho e composição entre a imagem do Quor e a imagem pública correspondente.
 
@@ -37,7 +51,7 @@ Apresentação detalhada da postura de segurança, tamanho e composição entre 
 
 <p class="image-date"><strong>Data de referência:</strong> 07/10/2026</p>
 
-### **Componentes da comparação**
+#### **Componentes da comparação**
 
 **Filtros:**
 
@@ -88,20 +102,6 @@ Um gráfico de barras dedicado que ilustra visualmente a diferença de peso entr
 !!!note "Acesso às abas SBOM e Provenance"
 
     Para informações sobre a composição completa de softwares ou proveniência do build, acesse as abas **SBOM** e **Provenance**.
-
-## Detalhes da imagem
-
-Ao clicar em uma imagem, você acessa a página de detalhes com informações completas organizadas em abas:
-
-![Detalhes da imagem - Versions](assets/catalog/versions.png)
-
-### Versions
-
-Lista todas as versões disponíveis da imagem, com data de atualização e comando `docker pull` para cada uma. Ao clicar em uma versão específica, é possível visualizar seus pacotes e vulnerabilidades, além de instruções de scan.
-
-### Quick Start
-
-Guia rápido com instruções de uso da imagem, incluindo exemplos de deploy em Kubernetes, Helm e Dockerfile.
 
 ### Specifications
 

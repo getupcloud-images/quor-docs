@@ -11,6 +11,8 @@ This helps avoid continuing to run outdated images even after vulnerabilities ha
 
 When one of the selected events happens, Quor sends an HTTPS POST request with a JSON payload to the URL configured for the webhook.
 
+Quor follows the [Standard Webhooks](https://www.standardwebhooks.com/) specification to sign webhook deliveries and allow recipients to verify their authenticity.
+
 Your server must:
 
 - Listen on HTTPS (plain HTTP is not supported)
@@ -20,7 +22,7 @@ Your server must:
 
 Additional behavior:
 
-- Deliveries are not retried automatically
+- Deliveries are not retried automatically.
 - Only the first 10 KB of the response body is stored for debugging purposes. Non-text responses are not stored.
 
 ## Supported events
@@ -45,12 +47,13 @@ Coming soon:
     
     ![Add webhook button in Quor](assets/webhooks/add.png)
     
-3. Enter a name to help identify the webhook and a valid HTTPS URL
+3. Enter a name to identify the webhook and a valid HTTPS URL
 4. Select which subscribed images and events should trigger the webhook.
 !!! info "Important"
-    If All subscribed images is selected, images subscribed after the webhook is created will also be considered.
-5. Optionally click **Test connection** to validate the endpoint before saving.
+    If "All subscribed images" is selected, images subscribed after the webhook is created will also be considered.
+5. Optionally, click **Test connection** to validate the endpoint before saving.
 6. Create the webhook.
+7. Save the secret displayed after creation. You will need it to [verify delivery signatures](#verifying-signatures).
 
 
 ![Creating a webhook in Quor](assets/webhooks/create.png)
@@ -88,26 +91,63 @@ making it possible to identify changes at both the image index level and the arc
 
 ```json
 {
-  "registry": "registry.quor.dev",
-  "image": "default/image",
-  "tag": "1.2-alpine",
-  "ui_url": "https://app.quor.dev/images/123/default/image/details",
-  "digest": "sha256:843b9c5e4dd478148afceeb6a8f2b0797fe041dbf88b38954d345e2618162c36",
-  "manifests": [
-    {
-      "architecture": "amd64",
-      "digest": "sha256:0b98bc2ee3ff2010ff6c0042e27b254f6f3ad7590bb84d259f8a4483f57fb2ae"
-    }
-  ],
-  "previous_digest": "sha256:ee25cd7ca070d8672563a17e030016ec2561cb7293008598b54eed85300d1a55",
-  "previous_manifests": [
-    {
-      "architecture": "amd64",
-      "digest": "sha256:e5b5f72a2b189a3292f78b8a3502e74ae8c5294946e62fcb5ee08e2b6e84adae"
-    }
-  ]
+  "type": "image.updated",
+  "timestamp": "2026-10-27T16:37:06-03:00",
+  "data": {
+    "registry": "registry.quor.dev",
+    "image": "default/image",
+    "tag": "1.2-alpine",
+    "ui_url": "https://app.quor.dev/images/123/default/image/details",
+    "digest": "sha256:843b9c5e4dd478148afceeb6a8f2b0797fe041dbf88b38954d345e2618162c36",
+    "manifests": [
+      {
+        "architecture": "amd64",
+        "digest": "sha256:0b98bc2ee3ff2010ff6c0042e27b254f6f3ad7590bb84d259f8a4483f57fb2ae"
+      }
+    ],
+    "previous_digest": "sha256:ee25cd7ca070d8672563a17e030016ec2561cb7293008598b54eed85300d1a55",
+    "previous_manifests": [
+      {
+        "architecture": "amd64",
+        "digest": "sha256:e5b5f72a2b189a3292f78b8a3502e74ae8c5294946e62fcb5ee08e2b6e84adae"
+      }
+    ]
+  }
 }
 ```
+
+## Verifying Signatures
+
+Quor signs webhook deliveries according to the [Standard Webhooks](https://www.standardwebhooks.com/) specification. We recommend verifying the signature before processing the payload.
+
+Each delivery includes the following HTTP headers:
+
+| Header              | Description                                                             |
+|---------------------|-------------------------------------------------------------------------|
+| `webhook-id`        | Unique event identifier, useful for preventing duplicate processing.    |
+| `webhook-timestamp` | Unix timestamp, in seconds, used to sign the delivery.                  |
+| `webhook-signature` | Cryptographic signature used to verify the authenticity of the request. |
+
+Use the secret provided when creating the webhook and a Standard Webhooks-compatible library to verify the signature. Verification must use the original request body, before any JSON transformation.
+
+We also recommend checking that the timestamp falls within an acceptable time window to reduce the risk of replay attacks.
+
+### Libraries
+
+Standard Webhooks provides reference implementations for several programming languages:
+
+- [Python](https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/python) - `standardwebhooks` on PyPi.
+- [JavaScript/TypeScript](https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/javascript) - `standardwebhooks` on NPM.
+- [Java/Kotlin](https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/java) - `com.standardwebhooks:standardwebhooks` on Maven Central.
+- [Rust](https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/rust) - `standardwebhooks` on crates.io.
+- [Go](https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/go) - `github.com/standard-webhooks/standard-webhooks/libraries/go` as a Go module.
+- [Ruby](https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/ruby) - `standardwebhooks` on RubyGems.
+- [PHP](https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/php)
+- [C#](https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/csharp) - `StandardWebhooks.StandardWebhooks` on nuget.
+- [Elixir](https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/elixir)
+
+
+See the [official Standard Webhooks repository](https://github.com/standard-webhooks/standard-webhooks) for the available implementations and usage instructions.
 
 ## Availability
 

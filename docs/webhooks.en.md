@@ -72,6 +72,7 @@ By opening a webhook, you can:
 * Enable or disable deliveries
 * Delete the webhook
 * View recent deliveries
+* Rotate the secret
 
 ## Listing deliveries
 
@@ -131,6 +132,8 @@ Each delivery includes the following HTTP headers:
 Use the secret provided when creating the webhook and a Standard Webhooks-compatible library to verify the signature. Verification must use the original request body, before any JSON transformation.
 
 We also recommend checking that the timestamp falls within an acceptable time window to reduce the risk of replay attacks.
+
+If you lose or accidentally expose your signing secret, you can generate a new one by rotating the signing secret.
 
 ### Libraries
 

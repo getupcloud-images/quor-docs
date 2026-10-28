@@ -69,6 +69,7 @@ Ao abrir um webhook, você pode:
 * Habilitar ou desabilitar entregas
 * Excluir o webhook
 * Visualizar entregas recentes
+* Rotacionar a secret
 
 ## Listando entregas
 
@@ -130,6 +131,8 @@ Utilize a secret fornecida na criação do webhook e uma biblioteca compatível 
 A validação deve usar o corpo original da requisição, antes de qualquer transformação do JSON.
 
 Também recomendamos verificar se o timestamp está dentro de uma janela de tempo aceitável para reduzir o risco de ataques de repetição (*replay attacks*).
+
+Se você perder ou expuser acidentalmente a secret de assinatura, poderá gerar uma nova por meio da rotação da secret do webhook.
 
 ### Bibliotecas
 

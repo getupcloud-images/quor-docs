@@ -15,8 +15,10 @@
         <link rel="canonical" href="https://docs.quor.dev/pt/webhooks/">
       
       
-        <link rel="prev" href="../vulnerability-attributes/">
+        <link rel="prev" href="../vex/">
       
+      
+        <link rel="next" href="../subscriptions/">
       
       
         
@@ -327,33 +329,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../internal-architecture/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Arquitetura interna
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../getting-started/" class="md-nav__link">
         
   
@@ -381,6 +356,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../internal-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura interna
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../catalog/" class="md-nav__link">
         
   
@@ -389,6 +391,33 @@
     
   
     Catálogo de imagens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vulnerability-attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atributos de uma vulnerabilidade
   
 
     
@@ -443,87 +472,6 @@
     
   
     VEX
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../subscriptions/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Subscrições de imagens
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../plans/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Contas e planos
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vulnerability-attributes/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Atributos de uma vulnerabilidade
   
 
     
@@ -669,6 +617,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verificando-a-assinatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verificando a assinatura
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verificando a assinatura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bibliotecas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bibliotecas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#disponibilidade" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -683,6 +659,60 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../subscriptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Subscrições de imagens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contas e planos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -780,6 +810,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verificando-a-assinatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verificando a assinatura
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verificando a assinatura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bibliotecas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bibliotecas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#disponibilidade" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -813,6 +871,7 @@ Isso pode ser usado para automatizar fluxos de trabalho ou disparar ações fora
 <p>Um caso de uso comum é notificar o time quando uma imagem subscrita é atualizada, permitindo reconstruir aplicações ou reimplantar workloads com a versão mais recente. Assim, o ambiente passa menos tempo rodando imagens afetadas por CVEs depois que a correção já está disponível no catálogo.</p>
 <h2 id="como-funciona">Como funciona<a class="headerlink" href="#como-funciona" title="Permanent link">&para;</a></h2>
 <p>Quando um dos eventos selecionados acontece, o Quor envia uma requisição HTTPS POST com um payload JSON para a URL configurada no webhook.</p>
+<p>O Quor segue a especificação <a href="https://www.standardwebhooks.com/">Standard Webhooks</a> para assinar as entregas e permitir que o destinatário verifique sua autenticidade.</p>
 <p>Seu servidor deve:</p>
 <ul>
 <li>Escutar em HTTPS (HTTP sem criptografia não é suportado)</li>
@@ -822,7 +881,7 @@ Isso pode ser usado para automatizar fluxos de trabalho ou disparar ações fora
 </ul>
 <p>Comportamento adicional:</p>
 <ul>
-<li>As entregas não são repetidas automaticamente</li>
+<li>As entregas não são repetidas automaticamente.</li>
 <li>Apenas os primeiros 10 KB do corpo da resposta são armazenados para fins de depuração. Respostas não textuais não são armazenadas.</li>
 </ul>
 <h2 id="eventos-suportados">Eventos suportados<a class="headerlink" href="#eventos-suportados" title="Permanent link">&para;</a></h2>
@@ -847,17 +906,18 @@ Isso pode ser usado para automatizar fluxos de trabalho ou disparar ações fora
 <p><img alt="Botão de adicionar webhook no Quor" src="../../assets/webhooks/add.png" /></p>
 </li>
 <li>
-<p>Informe um nome para ajudar a identificar o webhook e uma URL HTTPS válida</p>
+<p>Informe um nome para identificar o webhook e uma URL HTTPS válida</p>
 </li>
 <li>Selecione quais imagens subscritas e eventos devem disparar o webhook.</li>
 </ol>
 <div class="admonition info">
 <p class="admonition-title">Importante</p>
-<p>Se a opção Todas as imagens subscritas estiver selecionada, imagens subscritas após a criação do webhook também serão consideradas.</p>
+<p>Se a opção "Todas as imagens subscritas" estiver selecionada, imagens subscritas após a criação do webhook também serão consideradas.</p>
 </div>
 <ol>
 <li>Opcionalmente, clique em <strong>Testar conexão</strong> para validar o endpoint antes de salvar.</li>
 <li>Crie o webhook.</li>
+<li>Guarde a secret exibida após a criação. Ela será necessária para <a href="#verificando-a-assinatura">verificar a assinatura das entregas</a>.</li>
 </ol>
 <p><img alt="Criando um webhook no Quor" src="../../assets/webhooks/create.png" /></p>
 <p>Após a criação, o Quor notificará seu endpoint sempre que os eventos selecionados ocorrerem para as imagens especificadas.</p>
@@ -870,6 +930,7 @@ Isso pode ser usado para automatizar fluxos de trabalho ou disparar ações fora
 <li>Habilitar ou desabilitar entregas</li>
 <li>Excluir o webhook</li>
 <li>Visualizar entregas recentes</li>
+<li>Rotacionar a secret</li>
 </ul>
 <h2 id="listando-entregas">Listando entregas<a class="headerlink" href="#listando-entregas" title="Permanent link">&para;</a></h2>
 <p>As entregas recentes são exibidas na parte inferior da página de detalhes do webhook.</p>
@@ -881,26 +942,74 @@ incluindo detalhes da requisição e da resposta (corpo, cabeçalhos, status).</
 <p>O payload contém os digests anterior e atual da imagem,
 permitindo identificar mudanças tanto no nível do índice da imagem quanto no nível do manifesto específico de cada arquitetura.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">"registry"</span><span class="p">:</span><span class="w"> </span><span class="s2">"registry.quor.dev"</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default/image"</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.2-alpine"</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">"ui_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://app.quor.dev/images/123/default/image/details"</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">"digest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sha256:843b9c5e4dd478148afceeb6a8f2b0797fe041dbf88b38954d345e2618162c36"</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">"manifests"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">"architecture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"amd64"</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">"digest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sha256:0b98bc2ee3ff2010ff6c0042e27b254f6f3ad7590bb84d259f8a4483f57fb2ae"</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">],</span>
-<span class="w">  </span><span class="nt">"previous_digest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sha256:ee25cd7ca070d8672563a17e030016ec2561cb7293008598b54eed85300d1a55"</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">"previous_manifests"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">"architecture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"amd64"</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">"digest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sha256:e5b5f72a2b189a3292f78b8a3502e74ae8c5294946e62fcb5ee08e2b6e84adae"</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">]</span>
+<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image.updated"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-27T16:37:06-03:00"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"registry"</span><span class="p">:</span><span class="w"> </span><span class="s2">"registry.quor.dev"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default/image"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.2-alpine"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"ui_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://app.quor.dev/images/123/default/image/details"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"digest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sha256:843b9c5e4dd478148afceeb6a8f2b0797fe041dbf88b38954d345e2618162c36"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"manifests"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"architecture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"amd64"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"digest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sha256:0b98bc2ee3ff2010ff6c0042e27b254f6f3ad7590bb84d259f8a4483f57fb2ae"</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"previous_digest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sha256:ee25cd7ca070d8672563a17e030016ec2561cb7293008598b54eed85300d1a55"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"previous_manifests"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"architecture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"amd64"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"digest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sha256:e5b5f72a2b189a3292f78b8a3502e74ae8c5294946e62fcb5ee08e2b6e84adae"</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<h2 id="verificando-a-assinatura">Verificando a assinatura<a class="headerlink" href="#verificando-a-assinatura" title="Permanent link">&para;</a></h2>
+<p>O Quor assina as entregas seguindo a especificação <a href="https://www.standardwebhooks.com/">Standard Webhooks</a>. 
+Recomendamos verificar a assinatura recebida antes de processar o payload.</p>
+<p>Cada entrega inclui os seguintes cabeçalhos HTTP:</p>
+<table>
+<thead>
+<tr>
+<th>Cabeçalho</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>webhook-id</code></td>
+<td>Identificador único do evento, útil para evitar o processamento duplicado.</td>
+</tr>
+<tr>
+<td><code>webhook-timestamp</code></td>
+<td>Timestamp Unix, em segundos, usado na assinatura da entrega.</td>
+</tr>
+<tr>
+<td><code>webhook-signature</code></td>
+<td>Assinatura criptográfica usada para verificar a autenticidade da requisição.</td>
+</tr>
+</tbody>
+</table>
+<p>Utilize a secret fornecida na criação do webhook e uma biblioteca compatível com Standard Webhooks para verificar a assinatura. 
+A validação deve usar o corpo original da requisição, antes de qualquer transformação do JSON.</p>
+<p>Também recomendamos verificar se o timestamp está dentro de uma janela de tempo aceitável para reduzir o risco de ataques de repetição (<em>replay attacks</em>).</p>
+<p>Se você perder ou expuser acidentalmente a secret de assinatura, poderá gerar uma nova por meio da rotação da secret do webhook.</p>
+<h3 id="bibliotecas">Bibliotecas<a class="headerlink" href="#bibliotecas" title="Permanent link">&para;</a></h3>
+<p>O Standard Webhooks disponibiliza implementações de referência para diferentes linguagens:</p>
+<ul>
+<li><a href="https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/python">Python</a> - <code>standardwebhooks</code> no PyPi.</li>
+<li><a href="https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/javascript">JavaScript/TypeScript</a> - <code>standardwebhooks</code> no NPM.</li>
+<li><a href="https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/java">Java/Kotlin</a> - <code>com.standardwebhooks:standardwebhooks</code> no Maven Central.</li>
+<li><a href="https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/rust">Rust</a> - <code>standardwebhooks</code> no crates.io.</li>
+<li><a href="https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/go">Go</a> - <code>github.com/standard-webhooks/standard-webhooks/libraries/go</code>.</li>
+<li><a href="https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/ruby">Ruby</a> - <code>standardwebhooks</code> no RubyGems.</li>
+<li><a href="https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/php">PHP</a></li>
+<li><a href="https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/csharp">C#</a> - <code>StandardWebhooks.StandardWebhooks</code> no nuget.</li>
+<li><a href="https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/elixir">Elixir</a></li>
+</ul>
+<p>Consulte o <a href="https://github.com/standard-webhooks/standard-webhooks">repositório oficial do Standard Webhooks</a> para ver as implementações disponíveis e as instruções de uso.</p>
 <h2 id="disponibilidade">Disponibilidade<a class="headerlink" href="#disponibilidade" title="Permanent link">&para;</a></h2>
 <p>Os limites de webhooks dependem do plano da sua organização:</p>
 <table>
@@ -945,7 +1054,7 @@ permitindo identificar mudanças tanto no nível do índice da imagem quanto no 
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="11 de junho de 2026 16:15:06 UTC">11 de junho de 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="3 de novembro de 2026 17:15:30 UTC">3 de novembro de 2026</span>
   </span>
 
     

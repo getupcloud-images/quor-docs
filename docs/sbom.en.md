@@ -43,13 +43,27 @@ This reduces triage noise and improves response time.
 In Quor, SBOMs are generated during build and published with each image version as part of the security evidence set.
 They are distributed together with signatures and provenance metadata.
 
-You can download an SBOM in the UI:
+The image SBOM is available in the **Provenance** tab, where you can view the components, their versions and licenses, and download the inventory for analysis.
 
-1. Open the image catalog.
-2. Select an image.
-3. Open the **SBOM** tab on the details page.
-4. Select version and architecture.
-5. Download the SBOM file.
+To access it:
+
+1. In the catalog, open the details page of the image you want.
+2. Go to the **Provenance** tab.
+3. Scroll to the **SBOM** section, below **Image signatures**.
+
+The table shows the following information:
+
+- **Package:** name of the component included in the image.
+- **Version:** version of the component.
+- **Licenses:** licenses associated with the component.
+
+![SBOM in the Provenance tab](assets/catalog/image-details/provenance-sbom.png)
+
+Use pagination to browse the components when there is more than one page of results. The information corresponds to the version and architecture selected in the header.
+
+To get the file, click **Download SBOM**.
+
+SBOMs in **SPDX** and **CycloneDX** formats are also available as attestations. Instructions for downloading them with Cosign are in the **Verifying and downloading attestations** section of the same tab.
 
 ## Relationship with VEX, provenance, and SLSA
 

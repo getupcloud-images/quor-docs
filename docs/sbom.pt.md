@@ -36,19 +36,30 @@ Isso reduz ruído e acelera resposta.
 
 ## SBOM no Quor
 
-No Quor, a SBOM é gerada durante o build e publicada para cada versão da imagem como parte do conjunto de evidências de segurança.
-Ela é distribuída junto com assinaturas e metadados de proveniência.
+No Quor, o SBOM é gerado durante o build e publicado para cada versão da imagem como parte do conjunto de evidências de segurança.
+Ele é distribuído junto com assinaturas e metadados de proveniência.
 
-Para acessar e baixar:
+O SBOM da imagem está disponível na aba **Proveniência**, onde você pode consultar os componentes, suas versões e licenças, além de baixar o inventário para análise.
 
-1. Abra o catálogo de imagens.
-2. Clique na imagem desejada.
-3. Na página de detalhes, acesse a aba **SBOM**.
-4. Selecione a versão e a arquitetura.
-5. Faça o download do SBOM completo.
+Para acessar:
 
-![Detalhes da imagem - Versions](assets/sbom-details-versions.png)
-![Detalhes da imagem - SBOM](assets/sbom-details-sbom.png)
+1. No catálogo, abra a página de detalhes da imagem desejada.
+2. Acesse a aba **Proveniência**.
+3. Role até a seção **SBOM**, abaixo de **Assinaturas da imagem**.
+
+A tabela apresenta as seguintes informações:
+
+- **Pacote:** nome do componente presente na imagem.
+- **Versão:** versão do componente.
+- **Licenças:** licenças associadas ao componente.
+
+![SBOM na aba Proveniência](assets/catalog/image-details/provenance-sbom.png)
+
+Utilize a paginação para navegar pelos componentes quando houver mais de uma página de resultados. As informações correspondem à versão e à arquitetura selecionadas no cabeçalho.
+
+Para obter o arquivo, clique em **Baixar SBOM**.
+
+Os SBOMs nos formatos **SPDX** e **CycloneDX** também estão disponíveis como atestados. As instruções para baixá-los com o Cosign ficam na seção **Verificando e baixando atestados**, na mesma aba.
 
 ## Relação com VEX, proveniência e SLSA
 

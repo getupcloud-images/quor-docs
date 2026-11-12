@@ -31,98 +31,122 @@ Além da lista, a tela oferece recursos para localizar imagens específicas.
 
 ## Detalhes da imagem
 
-Ao clicar em uma imagem, você acessa a página de detalhes com informações completas organizadas em abas:
+Ao clicar em uma imagem, você acessa a página de detalhes com informações completas organizadas em abas.
 
-![Detalhes da imagem - Versions](assets/catalog/versions.png)
+No cabeçalho, é possível selecionar a **versão** e a **arquitetura** desejadas. Essas seleções definem o contexto das informações exibidas em todas as abas, permitindo consultar os dados de uma versão específica sem precisar selecioná-la novamente em cada seção.
 
-### Versions
-
-Lista todas as versões disponíveis da imagem, com data de atualização e comando `docker pull` para cada uma. Ao clicar em uma versão específica, é possível visualizar seus pacotes e vulnerabilidades, além de instruções de scan.
-
-### Quick Start
-
-Guia rápido com instruções de uso da imagem, incluindo exemplos de deploy em Kubernetes, Helm e Dockerfile.
+![Detalhes da imagem - Cabeçalho](assets/catalog/image-details/header.png)
 
 ### Comparação de imagens
 
-Apresentação detalhada da postura de segurança, tamanho e composição entre a imagem do Quor e a imagem pública correspondente.
+Apresenta uma comparação entre a imagem hardened do Quor e sua equivalente pública, permitindo analisar diferenças na quantidade de vulnerabilidades conhecidas, pacotes e tamanho comprimido.
 
-![Comparação de imagens](assets/catalog/image-details/comparison-1.png)
+#### Componentes da comparação
 
-<p class="image-date"><strong>Data de referência:</strong> 07/10/2026</p>
-
-#### **Componentes da comparação**
-
-**Filtros:**
-
-- **Versão:** Define a tag ou versão da imagem a ser analisada (ex.: Latest).
-- **Período:** Define a janela temporal do gráfico histórico (ex.: Last month).
-
-**Métricas principais:**
+**Métricas principais**
 
 Apresenta o endereço de registro (_registry URL_) de cada imagem e compara os seguintes indicadores:
 
-- CVEs: Quantidade total de vulnerabilidades conhecidas e o percentual de redução obtido (ex.: 8 vs. 177, com redução de `⬇ 95,5%`).
-- Packages: Quantidade de pacotes e dependências instaladas em cada imagem.
-- Compressed size: Tamanho comprimido da imagem em megabytes, demonstrando a redução no consumo de transferência e armazenamento.
+- **CVEs:** quantidade total de vulnerabilidades conhecidas em cada imagem e o percentual de redução obtido.
+- **Pacotes:** quantidade de pacotes e dependências identificados em cada imagem.
+- **Tamanho:** tamanho comprimido das imagens em megabytes (MB).
 
 **Vulnerabilidades por severidade**
 
-Detalhamento das vulnerabilidades por nível de severidade (_Critical_, _High_, _Medium_, _Low_, _Unknown_):
+Apresenta a distribuição das vulnerabilidades entre os níveis _Critical_, _High_, _Medium_, _Low_ e _Unknown_, comparando a quantidade identificada em cada imagem.
 
-- Exibe a comparação direta do número de falhas (Quor vs. Public) e o percentual de mitigação atingido em cada nível (ex.: 0 vs. 12 com ⬇ 100% de redução em falhas críticas).
+Também é possível selecionar o período de análise para visualizar como o número de vulnerabilidades evoluiu ao longo do tempo.
 
-**Gráficos de evolução temporal**  
-Dois gráficos de área comparam o histórico de vulnerabilidades da imagem do Quor em relação à imagem pública ao longo do período selecionado:
+**Gráficos de evolução temporal**
 
-- Exibe a variação diária de CVEs identificadas.
-- Utiliza cores correspondentes à gravidade para demonstrar a estabilidade da imagem ao longo do tempo.
+Dois gráficos apresentam o histórico de vulnerabilidades da imagem Quor e da imagem pública correspondente durante o período selecionado.
 
-**Atestações e Conformidade**  
-Compara a presença de atestados de segurança e artefatos de conformidade em cada build:
+- Exibem a evolução da quantidade de CVEs identificadas.
+- Utilizam cores correspondentes aos níveis de severidade.
 
-- **Imagem Quor:** Lista as atestações ativas e verificadas, como SLSA provenance, Cyclone DX SBOM, SPDX SBOM e declarações VEX.
-- **Imagem Pública:** Sinaliza a ausência de atestações de segurança (_No attestations_).
+**Atestados e conformidade**
 
-**Comparativo do Tamanho Comprimido**  
-Um gráfico de barras dedicado que ilustra visualmente a diferença de peso entre as duas imagens, exibindo a porcentagem exata de otimização (ex.: ⬇ 78% smaller).
+A comparação também apresenta informações sobre a disponibilidade de atestados e artefatos de segurança, como SLSA Provenance, SBOM nos formatos SPDX e CycloneDX e declarações VEX.
 
-![Comparativo do Tamanho Comprimido](assets/catalog/image-details/comparison-2.png)
+Essas informações ajudam a identificar quais evidências de composição, origem e integridade estão disponíveis para cada imagem.
 
-<p class="image-date"><strong>Data de referência:</strong> 07/10/2026</p>
+**Comparativo do tamanho comprimido**
 
-**Detalhes de Vulnerabilidades**
+Um gráfico de barras apresenta a diferença de tamanho entre as imagens, incluindo o percentual de redução obtido pela imagem Quor.
 
-- Vulnerabilidades (Vulnerabilities details): Lista cada registro de falha ativa por CVE ID e nível de Severity (ex.: _Low_, _Critical_, _High_). A paginação facilita a navegação e evidencia a drástica diferença no volume de ameaças (ex.: 2 páginas na imagem Quor vs. 36 páginas na imagem pública).
+![Comparativo do tamanho comprimido](assets/catalog/image-details/comparison-size.png)
 
-![Vulnerability details](assets/catalog/image-details/comparison-3.png)
+**Detalhes de vulnerabilidades**
 
-<p class="image-date"><strong>Data de referência:</strong> 07/10/2026</p>
+A seção de vulnerabilidades permite consultar as CVEs identificadas em cada imagem, incluindo seus identificadores e níveis de severidade.
 
-!!!note "Acesso às abas SBOM e Provenance"
+Para uma análise mais detalhada das vulnerabilidades presentes na imagem Quor, utilize a aba [**Vulnerabilidades**](#vulnerabilidades).
 
-    Para informações sobre a composição completa de softwares ou proveniência do build, acesse as abas **SBOM** e **Provenance**.
+![Detalhes de vulnerabilidades](assets/catalog/image-details/comparison-vulnerabilities.png)
 
-### Specifications
+### Vulnerabilidades
 
-Especificações técnicas da imagem, como arquitetura, tamanho e configurações.
+Apresenta as vulnerabilidades conhecidas identificadas na versão selecionada da imagem, com indicadores de severidade e uma lista detalhada das CVEs.
 
-### SBOM
+![Vulnerabilidades](assets/catalog/image-details/vulnerabilities.png)
 
-O **SBOM (Software Bill of Materials)** lista todos os pacotes contidos na imagem, com suas respectivas licenças. Você pode selecionar a versão e arquitetura desejadas e fazer download do SBOM completo.
+Na parte superior, é exibido um resumo da quantidade total de vulnerabilidades, distribuídas entre os níveis _Critical_, _High_, _Medium_, _Low_ e _Unknown_.
 
-![Detalhes da imagem - SBOM](assets/catalog/sbom.png)
+A tabela permite consultar:
 
-### Provenance
+- **CVE ID:** identificador da vulnerabilidade.
+- **Severidade:** classificação e pontuação da vulnerabilidade.
+- **Pacote:** componente associado à CVE.
+- **Versão:** versão do pacote afetado.
+- **Versão corrigida:** versão do pacote que contém a correção, quando disponível.
 
-Informações de proveniência da imagem, atestando sua origem e integridade.
-Para todas as imagens e versões, esse conjunto inclui SBOM, assinatura, atestados de proveniência e declarações VEX para adicionar contexto de explorabilidade na análise de vulnerabilidades.
+Ao expandir uma vulnerabilidade, é possível consultar informações adicionais para auxiliar na análise do componente afetado e das características da CVE.
+
+Para entender os indicadores apresentados, consulte a documentação de [Atributos de uma vulnerabilidade](vulnerability-attributes.md).
+
+### Especificações (Specifications)
+
+Apresenta as características técnicas e configurações da versão selecionada da imagem.
+
+![Especificações](assets/catalog/image-details/specifications.png)
+
+A seção informa a disponibilidade de ferramentas como Shell e APK Tools, além de configurações como:
+
+- **User:** usuário configurado para execução.
+- **Environment variables:** variáveis de ambiente definidas na imagem.
+- **Entrypoint e CMD:** configurações de inicialização do container.
+- **Volumes:** volumes declarados na imagem.
+- **Working directory:** diretório de trabalho configurado.
+
+Também é possível consultar e copiar as especificações em formato JSON.
+
+### Proveniência (Provenance)
+
+Informações de proveniência da imagem, atestando sua origem e integridade. Para todas as imagens e versões, esse conjunto inclui SBOM, assinatura, atestados de proveniência e declarações VEX para adicionar contexto de explorabilidade na análise de vulnerabilidades.
+
+Para consultar e baixar o SBOM da imagem, veja [SBOM no Quor](sbom.md#sbom-no-quor).
 
 ### Changelog
 
-O **Changelog** exibe o histórico de vulnerabilidades da imagem ao longo do tempo. Inclui um gráfico de evolução e uma lista detalhada das vulnerabilidades detectadas, com CVE ID, severidade, pacote afetado, versão e status de correção.
+O Changelog apresenta o histórico de vulnerabilidades e eventos relacionados às atualizações da imagem ao longo do tempo.
 
-![Detalhes da imagem - Changelog](assets/catalog/changelog.png)
+![Changelog](assets/catalog/image-details/changelog.png)
+
+**Histórico de vulnerabilidades**
+
+Um gráfico apresenta a evolução da quantidade de vulnerabilidades conhecidas da imagem, distribuídas por severidade.
+
+É possível selecionar o período de análise para acompanhar as mudanças no número de CVEs identificadas ao longo do tempo.
+
+**Eventos**
+
+Abaixo do gráfico, uma timeline apresenta os eventos registrados, organizados cronologicamente.
+
+Cada evento informa a data, o horário e as alterações identificadas na imagem, incluindo vulnerabilidades detectadas ou corrigidas.
+
+Os eventos de vulnerabilidades apresentam informações como CVE ID, severidade, pacote afetado, versão e versão corrigida, quando disponível.
+
+Também é possível utilizar o filtro de eventos para consultar categorias específicas de alterações.
 
 ## Solicitar novas imagens
 

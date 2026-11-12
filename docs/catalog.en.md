@@ -31,100 +31,122 @@ In addition to the image list, the page provides several options for finding spe
 
 ## Image details
 
-When you click on an image, you access the details page with complete information organized in tabs:
+When you click on an image, you access the details page with complete information organized in tabs.
 
-![Image details - Versions](assets/catalog/versions.png)
+In the header, you can select the **version** and **architecture** you want. These selections set the context for the information shown in every tab, so you can review the data for a specific version without selecting it again in each section.
 
-### Versions
-
-Lists all available versions of the image, with update date and `docker pull` command for each one. When clicking on a specific version, you can view its packages and vulnerabilities, as well as scan instructions.
-
-### Quick Start
-
-Quick guide with usage instructions for the image, including deployment examples for Kubernetes, Helm, and Dockerfile.
+![Image details - Header](assets/catalog/image-details/header.png)
 
 ### Image comparison
 
-A detailed view of the security posture, size, and composition of the Quor image compared to the corresponding public image.
+Compares the Quor hardened image with its public equivalent, so you can analyze differences in the number of known vulnerabilities, packages, and compressed size.
 
-![Image comparison](assets/catalog/image-details/comparison-1.png)
+#### Comparison components
 
-<p class="image-date"><strong>Reference date:</strong> October 7, 2026</p>
-
-#### **Comparison components**
-
-**Filters:**
-
-- **Version:** Sets the image tag or version to analyze (e.g., Latest).
-- **Period:** Sets the time window for the historical chart (e.g., Last month).
-
-**Key metrics:**
+**Key metrics**
 
 Shows the registry URL of each image and compares the following indicators:
 
-- CVEs: Total number of known vulnerabilities and the percentage reduction achieved (e.g., 8 vs. 177, a `⬇ 95.5%` reduction).
-- Packages: Number of packages and dependencies installed in each image.
-- Compressed size: Compressed image size in megabytes, showing the reduction in transfer and storage usage.
+- **CVEs:** total number of known vulnerabilities in each image and the percentage reduction achieved.
+- **Packages:** number of packages and dependencies identified in each image.
+- **Size:** compressed size of the images in megabytes (MB).
 
 **Vulnerabilities by severity**
 
-Breakdown of vulnerabilities by severity level (_Critical_, _High_, _Medium_, _Low_, _Unknown_):
+Shows how vulnerabilities are distributed across the _Critical_, _High_, _Medium_, _Low_, and _Unknown_ levels, comparing the number identified in each image.
 
-- Shows a direct comparison of the number of vulnerabilities (Quor vs. Public) and the mitigation percentage achieved at each level (e.g., 0 vs. 12 with a ⬇ 100% reduction in critical vulnerabilities).
+You can also select the analysis period to see how the number of vulnerabilities has changed over time.
 
-**Vulnerability trend charts**  
-Two area charts compare the vulnerability history of the Quor image against the public image over the selected period:
+**Vulnerability trend charts**
 
-- Shows the daily variation in identified CVEs.
-- Uses severity-coded colors to show the image's stability over time.
+Two charts show the vulnerability history of the Quor image and the corresponding public image over the selected period.
 
-**Attestations and compliance**  
-Compares the presence of security attestations and compliance artifacts in each build:
+- They show how the number of identified CVEs has changed.
+- They use colors that match the severity levels.
 
-- **Quor image:** Lists active, verified attestations, such as SLSA provenance, CycloneDX SBOM, SPDX SBOM, and VEX statements.
-- **Public image:** Indicates the absence of security attestations (_No attestations_).
+**Attestations and compliance**
 
-**Compressed size comparison**  
-A dedicated bar chart that visually illustrates the size difference between the two images, showing the exact optimization percentage (e.g., ⬇ 78% smaller).
+The comparison also shows which security attestations and artifacts are available, such as SLSA Provenance, SBOMs in SPDX and CycloneDX formats, and VEX statements.
 
-![Compressed size comparison](assets/catalog/image-details/comparison-2.png)
+This helps you identify which composition, origin, and integrity evidence is available for each image.
 
-<p class="image-date"><strong>Reference date:</strong> October 7, 2026</p>
+**Compressed size comparison**
 
-**Vulnerability**
+A bar chart shows the size difference between the images, including the percentage reduction achieved by the Quor image.
 
-At the bottom of the screen, side-by-side panels allow a granular audit of the security and composition of the images:
+![Compressed size comparison](assets/catalog/image-details/comparison-size.png)
 
-- Vulnerabilities (Vulnerabilities details): Lists each active vulnerability by CVE ID and Severity level (e.g., _Low_, _Critical_, _High_). Pagination makes navigation easier and highlights the stark difference in threat volume (e.g., 2 pages for the Quor image vs. 36 pages for the public image).
+**Vulnerability details**
 
-![Vulnerability details](assets/catalog/image-details/comparison-3.png)
+The vulnerabilities section lists the CVEs identified in each image, including their identifiers and severity levels.
 
-<p class="image-date"><strong>Reference date:</strong> October 7, 2026</p>
+For a more detailed analysis of the vulnerabilities in the Quor image, use the [**Vulnerabilities**](#vulnerabilities) tab.
 
-!!! note "Access to the SBOM and Provenance tabs"
+![Vulnerability details](assets/catalog/image-details/comparison-vulnerabilities.png)
 
-    For information about the full software composition or build provenance, go to the **SBOM** and **Provenance** tabs.
+### Vulnerabilities
+
+Shows the known vulnerabilities identified in the selected image version, with severity indicators and a detailed list of CVEs.
+
+![Vulnerabilities](assets/catalog/image-details/vulnerabilities.png)
+
+At the top, a summary shows the total number of vulnerabilities, broken down into the _Critical_, _High_, _Medium_, _Low_, and _Unknown_ levels.
+
+The table shows:
+
+- **CVE ID:** identifier of the vulnerability.
+- **Severity:** rating and score of the vulnerability.
+- **Package:** component associated with the CVE.
+- **Version:** version of the affected package.
+- **Fixed version:** version of the package that contains the fix, when available.
+
+Expand a vulnerability to see additional information that helps you analyze the affected component and the characteristics of the CVE.
+
+To understand the indicators shown, see [Vulnerability attributes](vulnerability-attributes.md).
 
 ### Specifications
 
-Technical specifications of the image, such as architecture, size, and configurations.
+Shows the technical characteristics and configuration of the selected image version.
 
-### SBOM
+![Specifications](assets/catalog/image-details/specifications.png)
 
-The **SBOM (Software Bill of Materials)** lists all packages contained in the image, with their respective licenses. You can select the desired version and architecture and download the complete SBOM.
+This section shows whether tools such as Shell and APK Tools are available, along with configuration such as:
 
-![Image details - SBOM](assets/catalog/sbom.png)
+- **User:** user configured to run the container.
+- **Environment variables:** environment variables defined in the image.
+- **Entrypoint and CMD:** container startup configuration.
+- **Volumes:** volumes declared in the image.
+- **Working directory:** configured working directory.
+
+You can also view and copy the specifications in JSON format.
 
 ### Provenance
 
-Provenance information for the image, attesting to its origin and integrity.
-For all images and versions, this evidence set includes SBOM, signature, provenance attestations, and VEX statements to add exploitability context to vulnerability analysis.
+Provenance information for the image, attesting to its origin and integrity. For all images and versions, this evidence set includes SBOM, signature, provenance attestations, and VEX statements to add exploitability context to vulnerability analysis.
+
+To view and download the image SBOM, see [SBOM in Quor](sbom.md#sbom-in-quor).
 
 ### Changelog
 
-The **Changelog** displays the vulnerability history of the image over time. It includes an evolution graph and a detailed list of detected vulnerabilities, with CVE ID, severity, affected package, version, and fix status.
+The Changelog shows the history of vulnerabilities and events related to image updates over time.
 
-![Image details - Changelog](assets/catalog/changelog.png)
+![Changelog](assets/catalog/image-details/changelog.png)
+
+**Vulnerability history**
+
+A chart shows how the number of known vulnerabilities in the image has changed, broken down by severity.
+
+You can select the analysis period to track changes in the number of identified CVEs over time.
+
+**Events**
+
+Below the chart, a timeline lists the recorded events in chronological order.
+
+Each event shows the date, time, and changes identified in the image, including detected or fixed vulnerabilities.
+
+Vulnerability events include information such as CVE ID, severity, affected package, version, and fixed version, when available.
+
+You can also use the event filter to view specific categories of changes.
 
 ## Requesting new images
 

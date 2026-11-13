@@ -53,7 +53,7 @@ A tabela apresenta as seguintes informações:
 - **Versão:** versão do componente.
 - **Licenças:** licenças associadas ao componente.
 
-![SBOM na aba Proveniência](assets/catalog/image-details/provenance-sbom.png)
+![SBOM na aba Proveniência](assets/SBOM/sbom.png)
 
 Utilize a paginação para navegar pelos componentes quando houver mais de uma página de resultados. As informações correspondem à versão e à arquitetura selecionadas no cabeçalho.
 

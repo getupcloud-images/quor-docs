@@ -35,7 +35,7 @@ Ao clicar em uma imagem, você acessa a página de detalhes com informações co
 
 No cabeçalho, é possível selecionar a **versão** e a **arquitetura** desejadas. Essas seleções definem o contexto das informações exibidas em todas as abas, permitindo consultar os dados de uma versão específica sem precisar selecioná-la novamente em cada seção.
 
-![Detalhes da imagem - Cabeçalho](assets/catalog/image-details/header.png)
+![Detalhes da imagem - Cabeçalho](assets/catalog/image-details/comparison-1.png)
 
 ### Comparação de imagens
 
@@ -74,7 +74,7 @@ Essas informações ajudam a identificar quais evidências de composição, orig
 
 Um gráfico de barras apresenta a diferença de tamanho entre as imagens, incluindo o percentual de redução obtido pela imagem Quor.
 
-![Comparativo do tamanho comprimido](assets/catalog/image-details/comparison-size.png)
+![Comparativo do tamanho comprimido](assets/catalog/image-details/comparison-2.png)
 
 **Detalhes de vulnerabilidades**
 
@@ -82,7 +82,7 @@ A seção de vulnerabilidades permite consultar as CVEs identificadas em cada im
 
 Para uma análise mais detalhada das vulnerabilidades presentes na imagem Quor, utilize a aba [**Vulnerabilidades**](#vulnerabilidades).
 
-![Detalhes de vulnerabilidades](assets/catalog/image-details/comparison-vulnerabilities.png)
+![Detalhes de vulnerabilidades](assets/catalog/image-details/comparison-3.png)
 
 ### Vulnerabilidades
 

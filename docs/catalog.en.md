@@ -35,7 +35,7 @@ When you click on an image, you access the details page with complete informatio
 
 In the header, you can select the **version** and **architecture** you want. These selections set the context for the information shown in every tab, so you can review the data for a specific version without selecting it again in each section.
 
-![Image details - Header](assets/catalog/image-details/header.png)
+![Image details - Header](assets/catalog/image-details/comparison-1-en.png)
 
 ### Image comparison
 
@@ -74,7 +74,7 @@ This helps you identify which composition, origin, and integrity evidence is ava
 
 A bar chart shows the size difference between the images, including the percentage reduction achieved by the Quor image.
 
-![Compressed size comparison](assets/catalog/image-details/comparison-size.png)
+![Compressed size comparison](assets/catalog/image-details/comparison-2-en.png)
 
 **Vulnerability details**
 
@@ -82,13 +82,13 @@ The vulnerabilities section lists the CVEs identified in each image, including t
 
 For a more detailed analysis of the vulnerabilities in the Quor image, use the [**Vulnerabilities**](#vulnerabilities) tab.
 
-![Vulnerability details](assets/catalog/image-details/comparison-vulnerabilities.png)
+![Vulnerability details](assets/catalog/image-details/comparison-3-en.png)
 
 ### Vulnerabilities
 
 Shows the known vulnerabilities identified in the selected image version, with severity indicators and a detailed list of CVEs.
 
-![Vulnerabilities](assets/catalog/image-details/vulnerabilities.png)
+![Vulnerabilities](assets/catalog/image-details/vulnerabilities-en.png)
 
 At the top, a summary shows the total number of vulnerabilities, broken down into the _Critical_, _High_, _Medium_, _Low_, and _Unknown_ levels.
 
@@ -108,7 +108,7 @@ To understand the indicators shown, see [Vulnerability attributes](vulnerability
 
 Shows the technical characteristics and configuration of the selected image version.
 
-![Specifications](assets/catalog/image-details/specifications.png)
+![Specifications](assets/catalog/image-details/specifications-en.png)
 
 This section shows whether tools such as Shell and APK Tools are available, along with configuration such as:
 

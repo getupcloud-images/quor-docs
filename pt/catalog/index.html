@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -468,28 +468,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#versions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Versions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick Start
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#comparacao-de-imagens" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -518,10 +496,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#specifications" class="md-nav__link">
+  <a href="#vulnerabilidades" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Specifications
+        Vulnerabilidades
       
     </span>
   </a>
@@ -529,10 +507,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sbom" class="md-nav__link">
+  <a href="#especificacoes-specifications" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SBOM
+        Especificações (Specifications)
       
     </span>
   </a>
@@ -540,10 +518,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#provenance" class="md-nav__link">
+  <a href="#proveniencia-provenance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Provenance
+        Proveniência (Provenance)
       
     </span>
   </a>
@@ -814,28 +792,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#versions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Versions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick Start
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#comparacao-de-imagens" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -864,10 +820,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#specifications" class="md-nav__link">
+  <a href="#vulnerabilidades" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Specifications
+        Vulnerabilidades
       
     </span>
   </a>
@@ -875,10 +831,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sbom" class="md-nav__link">
+  <a href="#especificacoes-specifications" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SBOM
+        Especificações (Specifications)
       
     </span>
   </a>
@@ -886,10 +842,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#provenance" class="md-nav__link">
+  <a href="#proveniencia-provenance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Provenance
+        Proveniência (Provenance)
       
     </span>
   </a>
@@ -980,74 +936,78 @@
 <li><strong>Distro/Imagem base:</strong> Filtra imagens pela distribuição Linux base (ex.: <em>Alpine</em>, <em>Distroless</em>).</li>
 </ul>
 <h2 id="detalhes-da-imagem">Detalhes da imagem<a class="headerlink" href="#detalhes-da-imagem" title="Permanent link">&para;</a></h2>
-<p>Ao clicar em uma imagem, você acessa a página de detalhes com informações completas organizadas em abas:</p>
-<p><img alt="Detalhes da imagem - Versions" src="../../assets/catalog/versions.png" /></p>
-<h3 id="versions">Versions<a class="headerlink" href="#versions" title="Permanent link">&para;</a></h3>
-<p>Lista todas as versões disponíveis da imagem, com data de atualização e comando <code>docker pull</code> para cada uma. Ao clicar em uma versão específica, é possível visualizar seus pacotes e vulnerabilidades, além de instruções de scan.</p>
-<h3 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h3>
-<p>Guia rápido com instruções de uso da imagem, incluindo exemplos de deploy em Kubernetes, Helm e Dockerfile.</p>
+<p>Ao clicar em uma imagem, você acessa a página de detalhes com informações completas organizadas em abas.</p>
+<p>No cabeçalho, é possível selecionar a <strong>versão</strong> e a <strong>arquitetura</strong> desejadas. Essas seleções definem o contexto das informações exibidas em todas as abas, permitindo consultar os dados de uma versão específica sem precisar selecioná-la novamente em cada seção.</p>
+<p><img alt="Detalhes da imagem - Cabeçalho" src="../../assets/catalog/image-details/comparison-1.png" /></p>
 <h3 id="comparacao-de-imagens">Comparação de imagens<a class="headerlink" href="#comparacao-de-imagens" title="Permanent link">&para;</a></h3>
-<p>Apresentação detalhada da postura de segurança, tamanho e composição entre a imagem do Quor e a imagem pública correspondente.</p>
-<p><img alt="Comparação de imagens" src="../../assets/catalog/image-details/comparison-1.png" /></p>
-<p class="image-date"><strong>Data de referência:</strong> 07/10/2026</p>
-
-<h4 id="componentes-da-comparacao"><strong>Componentes da comparação</strong><a class="headerlink" href="#componentes-da-comparacao" title="Permanent link">&para;</a></h4>
-<p><strong>Filtros:</strong></p>
-<ul>
-<li><strong>Versão:</strong> Define a tag ou versão da imagem a ser analisada (ex.: Latest).</li>
-<li><strong>Período:</strong> Define a janela temporal do gráfico histórico (ex.: Last month).</li>
-</ul>
-<p><strong>Métricas principais:</strong></p>
+<p>Apresenta uma comparação entre a imagem hardened do Quor e sua equivalente pública, permitindo analisar diferenças na quantidade de vulnerabilidades conhecidas, pacotes e tamanho comprimido.</p>
+<h4 id="componentes-da-comparacao">Componentes da comparação<a class="headerlink" href="#componentes-da-comparacao" title="Permanent link">&para;</a></h4>
+<p><strong>Métricas principais</strong></p>
 <p>Apresenta o endereço de registro (<em>registry URL</em>) de cada imagem e compara os seguintes indicadores:</p>
 <ul>
-<li>CVEs: Quantidade total de vulnerabilidades conhecidas e o percentual de redução obtido (ex.: 8 vs. 177, com redução de <code>⬇ 95,5%</code>).</li>
-<li>Packages: Quantidade de pacotes e dependências instaladas em cada imagem.</li>
-<li>Compressed size: Tamanho comprimido da imagem em megabytes, demonstrando a redução no consumo de transferência e armazenamento.</li>
+<li><strong>CVEs:</strong> quantidade total de vulnerabilidades conhecidas em cada imagem e o percentual de redução obtido.</li>
+<li><strong>Pacotes:</strong> quantidade de pacotes e dependências identificados em cada imagem.</li>
+<li><strong>Tamanho:</strong> tamanho comprimido das imagens em megabytes (MB).</li>
 </ul>
 <p><strong>Vulnerabilidades por severidade</strong></p>
-<p>Detalhamento das vulnerabilidades por nível de severidade (<em>Critical</em>, <em>High</em>, <em>Medium</em>, <em>Low</em>, <em>Unknown</em>):</p>
+<p>Apresenta a distribuição das vulnerabilidades entre os níveis <em>Critical</em>, <em>High</em>, <em>Medium</em>, <em>Low</em> e <em>Unknown</em>, comparando a quantidade identificada em cada imagem.</p>
+<p>Também é possível selecionar o período de análise para visualizar como o número de vulnerabilidades evoluiu ao longo do tempo.</p>
+<p><strong>Gráficos de evolução temporal</strong></p>
+<p>Dois gráficos apresentam o histórico de vulnerabilidades da imagem Quor e da imagem pública correspondente durante o período selecionado.</p>
 <ul>
-<li>Exibe a comparação direta do número de falhas (Quor vs. Public) e o percentual de mitigação atingido em cada nível (ex.: 0 vs. 12 com ⬇ 100% de redução em falhas críticas).</li>
+<li>Exibem a evolução da quantidade de CVEs identificadas.</li>
+<li>Utilizam cores correspondentes aos níveis de severidade.</li>
 </ul>
-<p><strong>Gráficos de evolução temporal</strong><br />
-Dois gráficos de área comparam o histórico de vulnerabilidades da imagem do Quor em relação à imagem pública ao longo do período selecionado:</p>
+<p><strong>Atestados e conformidade</strong></p>
+<p>A comparação também apresenta informações sobre a disponibilidade de atestados e artefatos de segurança, como SLSA Provenance, SBOM nos formatos SPDX e CycloneDX e declarações VEX.</p>
+<p>Essas informações ajudam a identificar quais evidências de composição, origem e integridade estão disponíveis para cada imagem.</p>
+<p><strong>Comparativo do tamanho comprimido</strong></p>
+<p>Um gráfico de barras apresenta a diferença de tamanho entre as imagens, incluindo o percentual de redução obtido pela imagem Quor.</p>
+<p><img alt="Comparativo do tamanho comprimido" src="../../assets/catalog/image-details/comparison-2.png" /></p>
+<p><strong>Detalhes de vulnerabilidades</strong></p>
+<p>A seção de vulnerabilidades permite consultar as CVEs identificadas em cada imagem, incluindo seus identificadores e níveis de severidade.</p>
+<p>Para uma análise mais detalhada das vulnerabilidades presentes na imagem Quor, utilize a aba <a href="#vulnerabilidades"><strong>Vulnerabilidades</strong></a>.</p>
+<p><img alt="Detalhes de vulnerabilidades" src="../../assets/catalog/image-details/comparison-3.png" /></p>
+<h3 id="vulnerabilidades">Vulnerabilidades<a class="headerlink" href="#vulnerabilidades" title="Permanent link">&para;</a></h3>
+<p>Apresenta as vulnerabilidades conhecidas identificadas na versão selecionada da imagem, com indicadores de severidade e uma lista detalhada das CVEs.</p>
+<p><img alt="Vulnerabilidades" src="../../assets/catalog/image-details/vulnerabilities.png" /></p>
+<p>Na parte superior, é exibido um resumo da quantidade total de vulnerabilidades, distribuídas entre os níveis <em>Critical</em>, <em>High</em>, <em>Medium</em>, <em>Low</em> e <em>Unknown</em>.</p>
+<p>A tabela permite consultar:</p>
 <ul>
-<li>Exibe a variação diária de CVEs identificadas.</li>
-<li>Utiliza cores correspondentes à gravidade para demonstrar a estabilidade da imagem ao longo do tempo.</li>
+<li><strong>CVE ID:</strong> identificador da vulnerabilidade.</li>
+<li><strong>Severidade:</strong> classificação e pontuação da vulnerabilidade.</li>
+<li><strong>Pacote:</strong> componente associado à CVE.</li>
+<li><strong>Versão:</strong> versão do pacote afetado.</li>
+<li><strong>Versão corrigida:</strong> versão do pacote que contém a correção, quando disponível.</li>
 </ul>
-<p><strong>Atestações e Conformidade</strong><br />
-Compara a presença de atestados de segurança e artefatos de conformidade em cada build:</p>
+<p>Ao expandir uma vulnerabilidade, é possível consultar informações adicionais para auxiliar na análise do componente afetado e das características da CVE.</p>
+<p>Para entender os indicadores apresentados, consulte a documentação de <a href="../vulnerability-attributes/">Atributos de uma vulnerabilidade</a>.</p>
+<h3 id="especificacoes-specifications">Especificações (Specifications)<a class="headerlink" href="#especificacoes-specifications" title="Permanent link">&para;</a></h3>
+<p>Apresenta as características técnicas e configurações da versão selecionada da imagem.</p>
+<p><img alt="Especificações" src="../../assets/catalog/image-details/specifications.png" /></p>
+<p>A seção informa a disponibilidade de ferramentas como Shell e APK Tools, além de configurações como:</p>
 <ul>
-<li><strong>Imagem Quor:</strong> Lista as atestações ativas e verificadas, como SLSA provenance, Cyclone DX SBOM, SPDX SBOM e declarações VEX.</li>
-<li><strong>Imagem Pública:</strong> Sinaliza a ausência de atestações de segurança (<em>No attestations</em>).</li>
+<li><strong>User:</strong> usuário configurado para execução.</li>
+<li><strong>Environment variables:</strong> variáveis de ambiente definidas na imagem.</li>
+<li><strong>Entrypoint e CMD:</strong> configurações de inicialização do container.</li>
+<li><strong>Volumes:</strong> volumes declarados na imagem.</li>
+<li><strong>Working directory:</strong> diretório de trabalho configurado.</li>
 </ul>
-<p><strong>Comparativo do Tamanho Comprimido</strong><br />
-Um gráfico de barras dedicado que ilustra visualmente a diferença de peso entre as duas imagens, exibindo a porcentagem exata de otimização (ex.: ⬇ 78% smaller).</p>
-<p><img alt="Comparativo do Tamanho Comprimido" src="../../assets/catalog/image-details/comparison-2.png" /></p>
-<p class="image-date"><strong>Data de referência:</strong> 07/10/2026</p>
-
-<p><strong>Detalhes de Vulnerabilidades</strong></p>
-<ul>
-<li>Vulnerabilidades (Vulnerabilities details): Lista cada registro de falha ativa por CVE ID e nível de Severity (ex.: <em>Low</em>, <em>Critical</em>, <em>High</em>). A paginação facilita a navegação e evidencia a drástica diferença no volume de ameaças (ex.: 2 páginas na imagem Quor vs. 36 páginas na imagem pública).</li>
-</ul>
-<p><img alt="Vulnerability details" src="../../assets/catalog/image-details/comparison-3.png" /></p>
-<p class="image-date"><strong>Data de referência:</strong> 07/10/2026</p>
-
-<div class="admonition note">
-<p class="admonition-title">Acesso às abas SBOM e Provenance</p>
-<p>Para informações sobre a composição completa de softwares ou proveniência do build, acesse as abas <strong>SBOM</strong> e <strong>Provenance</strong>.</p>
-</div>
-<h3 id="specifications">Specifications<a class="headerlink" href="#specifications" title="Permanent link">&para;</a></h3>
-<p>Especificações técnicas da imagem, como arquitetura, tamanho e configurações.</p>
-<h3 id="sbom">SBOM<a class="headerlink" href="#sbom" title="Permanent link">&para;</a></h3>
-<p>O <strong>SBOM (Software Bill of Materials)</strong> lista todos os pacotes contidos na imagem, com suas respectivas licenças. Você pode selecionar a versão e arquitetura desejadas e fazer download do SBOM completo.</p>
-<p><img alt="Detalhes da imagem - SBOM" src="../../assets/catalog/sbom.png" /></p>
-<h3 id="provenance">Provenance<a class="headerlink" href="#provenance" title="Permanent link">&para;</a></h3>
-<p>Informações de proveniência da imagem, atestando sua origem e integridade.
-Para todas as imagens e versões, esse conjunto inclui SBOM, assinatura, atestados de proveniência e declarações VEX para adicionar contexto de explorabilidade na análise de vulnerabilidades.</p>
+<p>Também é possível consultar e copiar as especificações em formato JSON.</p>
+<h3 id="proveniencia-provenance">Proveniência (Provenance)<a class="headerlink" href="#proveniencia-provenance" title="Permanent link">&para;</a></h3>
+<p>Informações de proveniência da imagem, atestando sua origem e integridade. Para todas as imagens e versões, esse conjunto inclui SBOM, assinatura, atestados de proveniência e declarações VEX para adicionar contexto de explorabilidade na análise de vulnerabilidades.</p>
+<p>Para consultar e baixar o SBOM da imagem, veja <a href="../sbom/#sbom-no-quor">SBOM no Quor</a>.</p>
 <h3 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h3>
-<p>O <strong>Changelog</strong> exibe o histórico de vulnerabilidades da imagem ao longo do tempo. Inclui um gráfico de evolução e uma lista detalhada das vulnerabilidades detectadas, com CVE ID, severidade, pacote afetado, versão e status de correção.</p>
-<p><img alt="Detalhes da imagem - Changelog" src="../../assets/catalog/changelog.png" /></p>
+<p>O Changelog apresenta o histórico de vulnerabilidades e eventos relacionados às atualizações da imagem ao longo do tempo.</p>
+<p><img alt="Changelog" src="../../assets/catalog/image-details/changelog.png" /></p>
+<p><strong>Histórico de vulnerabilidades</strong></p>
+<p>Um gráfico apresenta a evolução da quantidade de vulnerabilidades conhecidas da imagem, distribuídas por severidade.</p>
+<p>É possível selecionar o período de análise para acompanhar as mudanças no número de CVEs identificadas ao longo do tempo.</p>
+<p><strong>Eventos</strong></p>
+<p>Abaixo do gráfico, uma timeline apresenta os eventos registrados, organizados cronologicamente.</p>
+<p>Cada evento informa a data, o horário e as alterações identificadas na imagem, incluindo vulnerabilidades detectadas ou corrigidas.</p>
+<p>Os eventos de vulnerabilidades apresentam informações como CVE ID, severidade, pacote afetado, versão e versão corrigida, quando disponível.</p>
+<p>Também é possível utilizar o filtro de eventos para consultar categorias específicas de alterações.</p>
 <h2 id="solicitar-novas-imagens">Solicitar novas imagens<a class="headerlink" href="#solicitar-novas-imagens" title="Permanent link">&para;</a></h2>
 <p>O catálogo do Quor é expandido continuamente, com novas imagens adicionadas em ciclos regulares. Além disso, usuários podem solicitar a inclusão de imagens específicas.</p>
 <h3 id="criterios-para-solicitacao">Critérios para solicitação<a class="headerlink" href="#criterios-para-solicitacao" title="Permanent link">&para;</a></h3>
@@ -1081,7 +1041,7 @@ Para todas as imagens e versões, esse conjunto inclui SBOM, assinatura, atestad
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="7 de outubro de 2026 18:46:15 UTC">7 de outubro de 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="13 de novembro de 2026 19:33:44 UTC">13 de novembro de 2026</span>
   </span>
 
     
@@ -1135,7 +1095,7 @@ Para todas as imagens e versões, esse conjunto inclui SBOM, assinatura, atestad
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

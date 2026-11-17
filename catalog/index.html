@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -468,28 +468,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#versions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Versions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick Start
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#image-comparison" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -518,10 +496,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#specifications" class="md-nav__link">
+  <a href="#vulnerabilities" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Specifications
+        Vulnerabilities
       
     </span>
   </a>
@@ -529,10 +507,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sbom" class="md-nav__link">
+  <a href="#specifications" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SBOM
+        Specifications
       
     </span>
   </a>
@@ -814,28 +792,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#versions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Versions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick Start
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#image-comparison" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -864,10 +820,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#specifications" class="md-nav__link">
+  <a href="#vulnerabilities" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Specifications
+        Vulnerabilities
       
     </span>
   </a>
@@ -875,10 +831,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sbom" class="md-nav__link">
+  <a href="#specifications" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SBOM
+        Specifications
       
     </span>
   </a>
@@ -980,75 +936,78 @@
 <li><strong>Distro/Base image:</strong> Filter images by their base Linux distribution (e.g., <em>Alpine</em>, <em>Distroless</em>).</li>
 </ul>
 <h2 id="image-details">Image details<a class="headerlink" href="#image-details" title="Permanent link">&para;</a></h2>
-<p>When you click on an image, you access the details page with complete information organized in tabs:</p>
-<p><img alt="Image details - Versions" src="../assets/catalog/versions.png" /></p>
-<h3 id="versions">Versions<a class="headerlink" href="#versions" title="Permanent link">&para;</a></h3>
-<p>Lists all available versions of the image, with update date and <code>docker pull</code> command for each one. When clicking on a specific version, you can view its packages and vulnerabilities, as well as scan instructions.</p>
-<h3 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h3>
-<p>Quick guide with usage instructions for the image, including deployment examples for Kubernetes, Helm, and Dockerfile.</p>
+<p>When you click on an image, you access the details page with complete information organized in tabs.</p>
+<p>In the header, you can select the <strong>version</strong> and <strong>architecture</strong> you want. These selections set the context for the information shown in every tab, so you can review the data for a specific version without selecting it again in each section.</p>
+<p><img alt="Image details - Header" src="../assets/catalog/image-details/comparison-1-en.png" /></p>
 <h3 id="image-comparison">Image comparison<a class="headerlink" href="#image-comparison" title="Permanent link">&para;</a></h3>
-<p>A detailed view of the security posture, size, and composition of the Quor image compared to the corresponding public image.</p>
-<p><img alt="Image comparison" src="../assets/catalog/image-details/comparison-1.png" /></p>
-<p class="image-date"><strong>Reference date:</strong> October 7, 2026</p>
-
-<h4 id="comparison-components"><strong>Comparison components</strong><a class="headerlink" href="#comparison-components" title="Permanent link">&para;</a></h4>
-<p><strong>Filters:</strong></p>
-<ul>
-<li><strong>Version:</strong> Sets the image tag or version to analyze (e.g., Latest).</li>
-<li><strong>Period:</strong> Sets the time window for the historical chart (e.g., Last month).</li>
-</ul>
-<p><strong>Key metrics:</strong></p>
+<p>Compares the Quor hardened image with its public equivalent, so you can analyze differences in the number of known vulnerabilities, packages, and compressed size.</p>
+<h4 id="comparison-components">Comparison components<a class="headerlink" href="#comparison-components" title="Permanent link">&para;</a></h4>
+<p><strong>Key metrics</strong></p>
 <p>Shows the registry URL of each image and compares the following indicators:</p>
 <ul>
-<li>CVEs: Total number of known vulnerabilities and the percentage reduction achieved (e.g., 8 vs. 177, a <code>⬇ 95.5%</code> reduction).</li>
-<li>Packages: Number of packages and dependencies installed in each image.</li>
-<li>Compressed size: Compressed image size in megabytes, showing the reduction in transfer and storage usage.</li>
+<li><strong>CVEs:</strong> total number of known vulnerabilities in each image and the percentage reduction achieved.</li>
+<li><strong>Packages:</strong> number of packages and dependencies identified in each image.</li>
+<li><strong>Size:</strong> compressed size of the images in megabytes (MB).</li>
 </ul>
 <p><strong>Vulnerabilities by severity</strong></p>
-<p>Breakdown of vulnerabilities by severity level (<em>Critical</em>, <em>High</em>, <em>Medium</em>, <em>Low</em>, <em>Unknown</em>):</p>
+<p>Shows how vulnerabilities are distributed across the <em>Critical</em>, <em>High</em>, <em>Medium</em>, <em>Low</em>, and <em>Unknown</em> levels, comparing the number identified in each image.</p>
+<p>You can also select the analysis period to see how the number of vulnerabilities has changed over time.</p>
+<p><strong>Vulnerability trend charts</strong></p>
+<p>Two charts show the vulnerability history of the Quor image and the corresponding public image over the selected period.</p>
 <ul>
-<li>Shows a direct comparison of the number of vulnerabilities (Quor vs. Public) and the mitigation percentage achieved at each level (e.g., 0 vs. 12 with a ⬇ 100% reduction in critical vulnerabilities).</li>
+<li>They show how the number of identified CVEs has changed.</li>
+<li>They use colors that match the severity levels.</li>
 </ul>
-<p><strong>Vulnerability trend charts</strong><br />
-Two area charts compare the vulnerability history of the Quor image against the public image over the selected period:</p>
+<p><strong>Attestations and compliance</strong></p>
+<p>The comparison also shows which security attestations and artifacts are available, such as SLSA Provenance, SBOMs in SPDX and CycloneDX formats, and VEX statements.</p>
+<p>This helps you identify which composition, origin, and integrity evidence is available for each image.</p>
+<p><strong>Compressed size comparison</strong></p>
+<p>A bar chart shows the size difference between the images, including the percentage reduction achieved by the Quor image.</p>
+<p><img alt="Compressed size comparison" src="../assets/catalog/image-details/comparison-2-en.png" /></p>
+<p><strong>Vulnerability details</strong></p>
+<p>The vulnerabilities section lists the CVEs identified in each image, including their identifiers and severity levels.</p>
+<p>For a more detailed analysis of the vulnerabilities in the Quor image, use the <a href="#vulnerabilities"><strong>Vulnerabilities</strong></a> tab.</p>
+<p><img alt="Vulnerability details" src="../assets/catalog/image-details/comparison-3-en.png" /></p>
+<h3 id="vulnerabilities">Vulnerabilities<a class="headerlink" href="#vulnerabilities" title="Permanent link">&para;</a></h3>
+<p>Shows the known vulnerabilities identified in the selected image version, with severity indicators and a detailed list of CVEs.</p>
+<p><img alt="Vulnerabilities" src="../assets/catalog/image-details/vulnerabilities-en.png" /></p>
+<p>At the top, a summary shows the total number of vulnerabilities, broken down into the <em>Critical</em>, <em>High</em>, <em>Medium</em>, <em>Low</em>, and <em>Unknown</em> levels.</p>
+<p>The table shows:</p>
 <ul>
-<li>Shows the daily variation in identified CVEs.</li>
-<li>Uses severity-coded colors to show the image's stability over time.</li>
+<li><strong>CVE ID:</strong> identifier of the vulnerability.</li>
+<li><strong>Severity:</strong> rating and score of the vulnerability.</li>
+<li><strong>Package:</strong> component associated with the CVE.</li>
+<li><strong>Version:</strong> version of the affected package.</li>
+<li><strong>Fixed version:</strong> version of the package that contains the fix, when available.</li>
 </ul>
-<p><strong>Attestations and compliance</strong><br />
-Compares the presence of security attestations and compliance artifacts in each build:</p>
-<ul>
-<li><strong>Quor image:</strong> Lists active, verified attestations, such as SLSA provenance, CycloneDX SBOM, SPDX SBOM, and VEX statements.</li>
-<li><strong>Public image:</strong> Indicates the absence of security attestations (<em>No attestations</em>).</li>
-</ul>
-<p><strong>Compressed size comparison</strong><br />
-A dedicated bar chart that visually illustrates the size difference between the two images, showing the exact optimization percentage (e.g., ⬇ 78% smaller).</p>
-<p><img alt="Compressed size comparison" src="../assets/catalog/image-details/comparison-2.png" /></p>
-<p class="image-date"><strong>Reference date:</strong> October 7, 2026</p>
-
-<p><strong>Vulnerability</strong></p>
-<p>At the bottom of the screen, side-by-side panels allow a granular audit of the security and composition of the images:</p>
-<ul>
-<li>Vulnerabilities (Vulnerabilities details): Lists each active vulnerability by CVE ID and Severity level (e.g., <em>Low</em>, <em>Critical</em>, <em>High</em>). Pagination makes navigation easier and highlights the stark difference in threat volume (e.g., 2 pages for the Quor image vs. 36 pages for the public image).</li>
-</ul>
-<p><img alt="Vulnerability details" src="../assets/catalog/image-details/comparison-3.png" /></p>
-<p class="image-date"><strong>Reference date:</strong> October 7, 2026</p>
-
-<div class="admonition note">
-<p class="admonition-title">Access to the SBOM and Provenance tabs</p>
-<p>For information about the full software composition or build provenance, go to the <strong>SBOM</strong> and <strong>Provenance</strong> tabs.</p>
-</div>
+<p>Expand a vulnerability to see additional information that helps you analyze the affected component and the characteristics of the CVE.</p>
+<p>To understand the indicators shown, see <a href="../vulnerability-attributes/">Vulnerability attributes</a>.</p>
 <h3 id="specifications">Specifications<a class="headerlink" href="#specifications" title="Permanent link">&para;</a></h3>
-<p>Technical specifications of the image, such as architecture, size, and configurations.</p>
-<h3 id="sbom">SBOM<a class="headerlink" href="#sbom" title="Permanent link">&para;</a></h3>
-<p>The <strong>SBOM (Software Bill of Materials)</strong> lists all packages contained in the image, with their respective licenses. You can select the desired version and architecture and download the complete SBOM.</p>
-<p><img alt="Image details - SBOM" src="../assets/catalog/sbom.png" /></p>
+<p>Shows the technical characteristics and configuration of the selected image version.</p>
+<p><img alt="Specifications" src="../assets/catalog/image-details/specifications-en.png" /></p>
+<p>This section shows whether tools such as Shell and APK Tools are available, along with configuration such as:</p>
+<ul>
+<li><strong>User:</strong> user configured to run the container.</li>
+<li><strong>Environment variables:</strong> environment variables defined in the image.</li>
+<li><strong>Entrypoint and CMD:</strong> container startup configuration.</li>
+<li><strong>Volumes:</strong> volumes declared in the image.</li>
+<li><strong>Working directory:</strong> configured working directory.</li>
+</ul>
+<p>You can also view and copy the specifications in JSON format.</p>
 <h3 id="provenance">Provenance<a class="headerlink" href="#provenance" title="Permanent link">&para;</a></h3>
-<p>Provenance information for the image, attesting to its origin and integrity.
-For all images and versions, this evidence set includes SBOM, signature, provenance attestations, and VEX statements to add exploitability context to vulnerability analysis.</p>
+<p>Provenance information for the image, attesting to its origin and integrity. For all images and versions, this evidence set includes SBOM, signature, provenance attestations, and VEX statements to add exploitability context to vulnerability analysis.</p>
+<p>To view and download the image SBOM, see <a href="../sbom/#sbom-in-quor">SBOM in Quor</a>.</p>
 <h3 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h3>
-<p>The <strong>Changelog</strong> displays the vulnerability history of the image over time. It includes an evolution graph and a detailed list of detected vulnerabilities, with CVE ID, severity, affected package, version, and fix status.</p>
-<p><img alt="Image details - Changelog" src="../assets/catalog/changelog.png" /></p>
+<p>The Changelog shows the history of vulnerabilities and events related to image updates over time.</p>
+<p><img alt="Changelog" src="../assets/catalog/image-details/changelog.png" /></p>
+<p><strong>Vulnerability history</strong></p>
+<p>A chart shows how the number of known vulnerabilities in the image has changed, broken down by severity.</p>
+<p>You can select the analysis period to track changes in the number of identified CVEs over time.</p>
+<p><strong>Events</strong></p>
+<p>Below the chart, a timeline lists the recorded events in chronological order.</p>
+<p>Each event shows the date, time, and changes identified in the image, including detected or fixed vulnerabilities.</p>
+<p>Vulnerability events include information such as CVE ID, severity, affected package, version, and fixed version, when available.</p>
+<p>You can also use the event filter to view specific categories of changes.</p>
 <h2 id="requesting-new-images">Requesting new images<a class="headerlink" href="#requesting-new-images" title="Permanent link">&para;</a></h2>
 <p>The Quor catalog is continuously expanded, with new images added in regular cycles. Additionally, users can request the inclusion of specific images.</p>
 <h3 id="request-criteria">Request criteria<a class="headerlink" href="#request-criteria" title="Permanent link">&para;</a></h3>
@@ -1082,7 +1041,7 @@ For all images and versions, this evidence set includes SBOM, signature, provena
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 7, 2026 18:46:15 UTC">October 7, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 13, 2026 19:33:44 UTC">November 13, 2026</span>
   </span>
 
     
@@ -1136,7 +1095,7 @@ For all images and versions, this evidence set includes SBOM, signature, provena
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

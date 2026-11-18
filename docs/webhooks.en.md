@@ -1,10 +1,10 @@
 # Webhooks
 
-Webhooks allow external services to be notified when events happen in Quor. 
+Webhooks allow external services to be notified when events happen in Quor.
 This can be used to automate workflows or trigger actions outside the platform.
 
-A common use case is being notified when a subscribed image is updated, 
-so you can rebuild or redeploy workloads using the latest version. 
+A common use case is being notified when a subscribed image is updated,
+so you can rebuild or redeploy workloads using the latest version.
 This helps avoid continuing to run outdated images even after vulnerabilities have been fixed.
 
 ## How it works
@@ -40,23 +40,22 @@ Coming soon:
 ## Creating a webhook
 
 1. On Quor, navigate to **Webhooks** from the left sidebar.
-    
-    ![Webhook menu in Quor](assets/webhooks/menu.png)
-   
+
+   ![Webhook menu in Quor](assets/webhooks/webhook-sidebar-en.png)
+
 2. Click **Add webhook**.
-    
-    ![Add webhook button in Quor](assets/webhooks/add.png)
-    
+
+   ![Add webhook button in Quor](assets/webhooks/add-en.png)
+
 3. Enter a name to identify the webhook and a valid HTTPS URL
 4. Select which subscribed images and events should trigger the webhook.
-!!! info "Important"
-    If "All subscribed images" is selected, images subscribed after the webhook is created will also be considered.
+   !!! info "Important"
+   If "All subscribed images" is selected, images subscribed after the webhook is created will also be considered.
 5. Optionally, click **Test connection** to validate the endpoint before saving.
 6. Create the webhook.
 7. Save the secret displayed after creation. You will need it to [verify delivery signatures](#verifying-signatures).
 
-
-![Creating a webhook in Quor](assets/webhooks/create.png)
+![Creating a webhook in Quor](assets/webhooks/add-webhook-slide-over-en.png)
 
 Once created, Quor will notify your endpoint whenever the selected events occur for the specified images.
 
@@ -64,30 +63,30 @@ Once created, Quor will notify your endpoint whenever the selected events occur 
 
 All configured webhooks in your organization are listed in the Webhooks page.
 
-![Listing webhooks in Quor](assets/webhooks/list.png)
+![Listing webhooks in Quor](assets/webhooks/list-webhooks-en.png)
 
 By opening a webhook, you can:
 
-* Edit configuration
-* Enable or disable deliveries
-* Delete the webhook
-* View recent deliveries
-* Rotate the secret
+- Edit configuration
+- Enable or disable deliveries
+- Delete the webhook
+- View recent deliveries
+- Rotate the secret
 
 ## Listing deliveries
 
 Recent deliveries are displayed at the bottom of the webhook details page.
 
-![Listing webhook deliveries in Quor](assets/webhooks/deliveries.png)
+![Listing webhook deliveries in Quor](assets/webhooks/deliveries-en.png)
 
-By opening a delivery, you can inspect the complete request and response information, 
+By opening a delivery, you can inspect the complete request and response information,
 including request and response details (body, headers, status).
 
-![Details of a webhook delivery request in Quor](assets/webhooks/delivery.png)
+![Details of a webhook delivery request in Quor](assets/webhooks/delivery-en.png)
 
 ## Payload
 
-The payload contains both the previous and current image digests, 
+The payload contains both the previous and current image digests,
 making it possible to identify changes at both the image index level and the architecture-specific manifest level.
 
 ```json
@@ -124,7 +123,7 @@ Quor signs webhook deliveries according to the [Standard Webhooks](https://www.s
 Each delivery includes the following HTTP headers:
 
 | Header              | Description                                                             |
-|---------------------|-------------------------------------------------------------------------|
+| ------------------- | ----------------------------------------------------------------------- |
 | `webhook-id`        | Unique event identifier, useful for preventing duplicate processing.    |
 | `webhook-timestamp` | Unix timestamp, in seconds, used to sign the delivery.                  |
 | `webhook-signature` | Cryptographic signature used to verify the authenticity of the request. |
@@ -149,7 +148,6 @@ Standard Webhooks provides reference implementations for several programming lan
 - [C#](https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/csharp) - `StandardWebhooks.StandardWebhooks` on nuget.
 - [Elixir](https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/elixir)
 
-
 See the [official Standard Webhooks repository](https://github.com/standard-webhooks/standard-webhooks) for the available implementations and usage instructions.
 
 ## Availability
@@ -157,7 +155,7 @@ See the [official Standard Webhooks repository](https://github.com/standard-webh
 Webhook limits depend on your organization plan:
 
 | Plan            |  Webhooks |
-|-----------------|----------:|
+| --------------- | --------: |
 | Trial (14 days) |         1 |
 | Free            |         0 |
 | Enterprise      | Unlimited |

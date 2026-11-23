@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -897,33 +897,27 @@ Isso pode ser usado para automatizar fluxos de trabalho ou disparar ações fora
 </ul>
 <h2 id="criando-um-webhook">Criando um webhook<a class="headerlink" href="#criando-um-webhook" title="Permanent link">&para;</a></h2>
 <ol>
-<li>
-<p>No Quor, navegue até <strong>Webhooks</strong> na barra lateral esquerda.</p>
-<p><img alt="Menu de webhooks no Quor" src="../../assets/webhooks/menu.png" /></p>
-</li>
-<li>
-<p>Clique em <strong>Adicionar webhook</strong>.</p>
-<p><img alt="Botão de adicionar webhook no Quor" src="../../assets/webhooks/add.png" /></p>
-</li>
-<li>
-<p>Informe um nome para identificar o webhook e uma URL HTTPS válida</p>
-</li>
-<li>Selecione quais imagens subscritas e eventos devem disparar o webhook.</li>
+<li>No Quor, navegue até <strong>Webhooks</strong> na barra lateral esquerda.</li>
 </ol>
-<div class="admonition info">
-<p class="admonition-title">Importante</p>
-<p>Se a opção "Todas as imagens subscritas" estiver selecionada, imagens subscritas após a criação do webhook também serão consideradas.</p>
-</div>
+<p><img alt="Menu de webhooks no Quor" src="../../assets/webhooks/webhook-sidebar-pt.png" /></p>
 <ol>
+<li>Clique em <strong>Adicionar webhook</strong>.</li>
+</ol>
+<p><img alt="Botão de adicionar webhook no Quor" src="../../assets/webhooks/add-pt.png" /></p>
+<ol>
+<li>Informe um nome para identificar o webhook e uma URL HTTPS válida</li>
+<li>Selecione quais imagens subscritas e eventos devem disparar o webhook.
+   !!! info "Importante"
+   Se a opção "Todas as imagens subscritas" estiver selecionada, imagens subscritas após a criação do webhook também serão consideradas.</li>
 <li>Opcionalmente, clique em <strong>Testar conexão</strong> para validar o endpoint antes de salvar.</li>
 <li>Crie o webhook.</li>
 <li>Guarde a secret exibida após a criação. Ela será necessária para <a href="#verificando-a-assinatura">verificar a assinatura das entregas</a>.</li>
 </ol>
-<p><img alt="Criando um webhook no Quor" src="../../assets/webhooks/create.png" /></p>
+<p><img alt="Criando um webhook no Quor" src="../../assets/webhooks/add-webhook-slide-over-pt.png" /></p>
 <p>Após a criação, o Quor notificará seu endpoint sempre que os eventos selecionados ocorrerem para as imagens especificadas.</p>
 <h2 id="gerenciando-webhooks">Gerenciando webhooks<a class="headerlink" href="#gerenciando-webhooks" title="Permanent link">&para;</a></h2>
 <p>Todos os webhooks configurados em sua organização são listados na página de Webhooks.</p>
-<p><img alt="Listagem de webhooks no Quor" src="../../assets/webhooks/list.png" /></p>
+<p><img alt="Listagem de webhooks no Quor" src="../../assets/webhooks/list-webhooks-pt.png" /></p>
 <p>Ao abrir um webhook, você pode:</p>
 <ul>
 <li>Editar a configuração</li>
@@ -934,10 +928,10 @@ Isso pode ser usado para automatizar fluxos de trabalho ou disparar ações fora
 </ul>
 <h2 id="listando-entregas">Listando entregas<a class="headerlink" href="#listando-entregas" title="Permanent link">&para;</a></h2>
 <p>As entregas recentes são exibidas na parte inferior da página de detalhes do webhook.</p>
-<p><img alt="Listagem de entregas de webhook no Quor" src="../../assets/webhooks/deliveries.png" /></p>
+<p><img alt="Listagem de entregas de webhook no Quor" src="../../assets/webhooks/deliveries-pt.png" /></p>
 <p>Ao abrir uma entrega, você pode inspecionar as informações completas da requisição e da resposta,
 incluindo detalhes da requisição e da resposta (corpo, cabeçalhos, status).</p>
-<p><img alt="Detalhes de uma requisição de entrega de webhook no Quor" src="../../assets/webhooks/delivery.png" /></p>
+<p><img alt="Detalhes de uma requisição de entrega de webhook no Quor" src="../../assets/webhooks/delivery-pt.png" /></p>
 <h2 id="payload">Payload<a class="headerlink" href="#payload" title="Permanent link">&para;</a></h2>
 <p>O payload contém os digests anterior e atual da imagem,
 permitindo identificar mudanças tanto no nível do índice da imagem quanto no nível do manifesto específico de cada arquitetura.</p>
@@ -967,7 +961,7 @@ permitindo identificar mudanças tanto no nível do índice da imagem quanto no 
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="verificando-a-assinatura">Verificando a assinatura<a class="headerlink" href="#verificando-a-assinatura" title="Permanent link">&para;</a></h2>
-<p>O Quor assina as entregas seguindo a especificação <a href="https://www.standardwebhooks.com/">Standard Webhooks</a>. 
+<p>O Quor assina as entregas seguindo a especificação <a href="https://www.standardwebhooks.com/">Standard Webhooks</a>.
 Recomendamos verificar a assinatura recebida antes de processar o payload.</p>
 <p>Cada entrega inclui os seguintes cabeçalhos HTTP:</p>
 <table>
@@ -992,7 +986,7 @@ Recomendamos verificar a assinatura recebida antes de processar o payload.</p>
 </tr>
 </tbody>
 </table>
-<p>Utilize a secret fornecida na criação do webhook e uma biblioteca compatível com Standard Webhooks para verificar a assinatura. 
+<p>Utilize a secret fornecida na criação do webhook e uma biblioteca compatível com Standard Webhooks para verificar a assinatura.
 A validação deve usar o corpo original da requisição, antes de qualquer transformação do JSON.</p>
 <p>Também recomendamos verificar se o timestamp está dentro de uma janela de tempo aceitável para reduzir o risco de ataques de repetição (<em>replay attacks</em>).</p>
 <p>Se você perder ou expuser acidentalmente a secret de assinatura, poderá gerar uma nova por meio da rotação da secret do webhook.</p>
@@ -1054,7 +1048,7 @@ A validação deve usar o corpo original da requisição, antes de qualquer tran
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="3 de novembro de 2026 17:15:30 UTC">3 de novembro de 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="18 de novembro de 2026 20:27:34 UTC">18 de novembro de 2026</span>
   </span>
 
     

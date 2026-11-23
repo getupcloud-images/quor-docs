@@ -38,22 +38,22 @@ Em breve:
 ## Criando um webhook
 
 1. No Quor, navegue até **Webhooks** na barra lateral esquerda.
-    
-    ![Menu de webhooks no Quor](assets/webhooks/menu.png)
-   
+
+   ![Menu de webhooks no Quor](assets/webhooks/webhook-sidebar-pt.png)
+
 2. Clique em **Adicionar webhook**.
-    
-    ![Botão de adicionar webhook no Quor](assets/webhooks/add.png)
-    
+
+   ![Botão de adicionar webhook no Quor](assets/webhooks/add-pt.png)
+
 3. Informe um nome para identificar o webhook e uma URL HTTPS válida
 4. Selecione quais imagens subscritas e eventos devem disparar o webhook.
-!!! info "Importante"
-    Se a opção "Todas as imagens subscritas" estiver selecionada, imagens subscritas após a criação do webhook também serão consideradas.
+   !!! info "Importante"
+   Se a opção "Todas as imagens subscritas" estiver selecionada, imagens subscritas após a criação do webhook também serão consideradas.
 5. Opcionalmente, clique em **Testar conexão** para validar o endpoint antes de salvar.
 6. Crie o webhook.
 7. Guarde a secret exibida após a criação. Ela será necessária para [verificar a assinatura das entregas](#verificando-a-assinatura).
 
-![Criando um webhook no Quor](assets/webhooks/create.png)
+![Criando um webhook no Quor](assets/webhooks/add-webhook-slide-over-pt.png)
 
 Após a criação, o Quor notificará seu endpoint sempre que os eventos selecionados ocorrerem para as imagens especificadas.
 
@@ -61,26 +61,26 @@ Após a criação, o Quor notificará seu endpoint sempre que os eventos selecio
 
 Todos os webhooks configurados em sua organização são listados na página de Webhooks.
 
-![Listagem de webhooks no Quor](assets/webhooks/list.png)
+![Listagem de webhooks no Quor](assets/webhooks/list-webhooks-pt.png)
 
 Ao abrir um webhook, você pode:
 
-* Editar a configuração
-* Habilitar ou desabilitar entregas
-* Excluir o webhook
-* Visualizar entregas recentes
-* Rotacionar a secret
+- Editar a configuração
+- Habilitar ou desabilitar entregas
+- Excluir o webhook
+- Visualizar entregas recentes
+- Rotacionar a secret
 
 ## Listando entregas
 
 As entregas recentes são exibidas na parte inferior da página de detalhes do webhook.
 
-![Listagem de entregas de webhook no Quor](assets/webhooks/deliveries.png)
+![Listagem de entregas de webhook no Quor](assets/webhooks/deliveries-pt.png)
 
 Ao abrir uma entrega, você pode inspecionar as informações completas da requisição e da resposta,
 incluindo detalhes da requisição e da resposta (corpo, cabeçalhos, status).
 
-![Detalhes de uma requisição de entrega de webhook no Quor](assets/webhooks/delivery.png)
+![Detalhes de uma requisição de entrega de webhook no Quor](assets/webhooks/delivery-pt.png)
 
 ## Payload
 
@@ -116,21 +116,21 @@ permitindo identificar mudanças tanto no nível do índice da imagem quanto no 
 
 ## Verificando a assinatura
 
-O Quor assina as entregas seguindo a especificação [Standard Webhooks](https://www.standardwebhooks.com/). 
+O Quor assina as entregas seguindo a especificação [Standard Webhooks](https://www.standardwebhooks.com/).
 Recomendamos verificar a assinatura recebida antes de processar o payload.
 
 Cada entrega inclui os seguintes cabeçalhos HTTP:
 
 | Cabeçalho           | Descrição                                                                    |
-|---------------------|------------------------------------------------------------------------------|
+| ------------------- | ---------------------------------------------------------------------------- |
 | `webhook-id`        | Identificador único do evento, útil para evitar o processamento duplicado.   |
 | `webhook-timestamp` | Timestamp Unix, em segundos, usado na assinatura da entrega.                 |
 | `webhook-signature` | Assinatura criptográfica usada para verificar a autenticidade da requisição. |
 
-Utilize a secret fornecida na criação do webhook e uma biblioteca compatível com Standard Webhooks para verificar a assinatura. 
+Utilize a secret fornecida na criação do webhook e uma biblioteca compatível com Standard Webhooks para verificar a assinatura.
 A validação deve usar o corpo original da requisição, antes de qualquer transformação do JSON.
 
-Também recomendamos verificar se o timestamp está dentro de uma janela de tempo aceitável para reduzir o risco de ataques de repetição (*replay attacks*).
+Também recomendamos verificar se o timestamp está dentro de uma janela de tempo aceitável para reduzir o risco de ataques de repetição (_replay attacks_).
 
 Se você perder ou expuser acidentalmente a secret de assinatura, poderá gerar uma nova por meio da rotação da secret do webhook.
 
@@ -154,8 +154,8 @@ Consulte o [repositório oficial do Standard Webhooks](https://github.com/standa
 
 Os limites de webhooks dependem do plano da sua organização:
 
-| Plano             |  Webhooks |
-|-------------------|----------:|
-| Trial (14 dias)   |         1 |
-| Free              |         0 |
-| Enterprise        | Ilimitado |
+| Plano           |  Webhooks |
+| --------------- | --------: |
+| Trial (14 dias) |         1 |
+| Free            |         0 |
+| Enterprise      | Ilimitado |

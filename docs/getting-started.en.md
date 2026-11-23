@@ -18,7 +18,7 @@ On your first login (using GitHub, Microsoft, or Gmail), Quor automatically:
 - Activates the Trial plan.
 - Creates the administrators group (admin), with all permissions to manage the interface.
 
-![Quor login screen](assets/login-screen.png)
+![Quor login screen](assets/getting-started/login-en.png)
 
 After your account is created, you gain access to the Quor interface and can view the **Explore Images** section.
 
@@ -40,17 +40,17 @@ The access token is the credential used to authenticate with the Quor registry. 
 1. While logged into Quor, go to **Pull Tokens**.
 2. Click on **Create Token**.
 
-![Pull Tokens settings page](assets/pull-tokens-settings.png)
+![Pull Tokens settings page](assets/getting-started/tokens-en.png)
 
 3. Enter a description to identify the token.
 4. Set an expiration date (must be within 1 year).
 
-![Token creation modal](assets/create-token-modal.png)
+![Token creation modal](assets/getting-started/create-new-token-en.png)
 
 5. Confirm the creation.
 6. Once created, the `docker login` command will be displayed, containing the authentication data for the registry.
 
-![Token generated successfully](assets/token-generated.png)
+![Token generated successfully](assets/getting-started/token-generated-en.png)
 
 !!! warning "Important"
 

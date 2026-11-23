@@ -7,7 +7,7 @@ keywords: Quor architecture, container image rebuild, CVE remediation, supply ch
 
 This page provides a high-level and more descriptive view of how Quor identifies vulnerable images, rebuilds them from source code, and keeps the catalog close to zero known CVEs over time.
 
-![Quor internal architecture diagram](assets/diagram-en.png)
+![Quor internal architecture diagram](assets/internal-architecture/diagram-en.png)
 
 ## Architecture goal
 

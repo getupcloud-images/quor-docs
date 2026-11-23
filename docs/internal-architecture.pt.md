@@ -7,7 +7,7 @@ keywords: arquitetura Quor, rebuild de imagens, remediação de CVE, segurança 
 
 Esta página traz uma visão de alto nível, mais descritiva, de como o Quor identifica imagens vulneráveis, recompila imagens a partir do código-fonte e mantém o catálogo próximo de zero CVEs conhecidas ao longo do tempo.
 
-![Diagrama da arquitetura interna do Quor](assets/diagram-pt.png)
+![Diagrama da arquitetura interna do Quor](assets/internal-architecture/diagram-pt.png)
 
 ## Objetivo da arquitetura
 

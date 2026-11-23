@@ -57,7 +57,7 @@ The table shows the following information:
 - **Version:** version of the component.
 - **Licenses:** licenses associated with the component.
 
-![SBOM in the Provenance tab](assets/SBOM/sbom.png)
+![SBOM in the Provenance tab](assets/sbom/sbom.png)
 
 Use pagination to browse the components when there is more than one page of results. The information corresponds to the version and architecture selected in the header.
 
